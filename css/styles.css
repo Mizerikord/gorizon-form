@@ -340,6 +340,7 @@ body {
     background-color: #fff;
     z-index: 9;
     box-sizing: border-box;
+    border: 1px solid #000000;
 }
 
 .regions {
@@ -362,6 +363,7 @@ body {
 }
 
 .price-enter-input {
+    width: 100%;
     height: 40px;
     padding: 0 10px;
 }
@@ -438,6 +440,8 @@ body {
 .price-select {
     display: flex;
     justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
 }
 
 .price-enter-input {
@@ -659,5 +663,21 @@ body {
 
     .filter-result-btn_close {
         display: none;
+    }
+
+    .popup{
+        width: 100%;
+        padding: 10px;
+        top: 50px;
+        left: 0;
+        right: 0;
+    }
+
+    .locations{
+        margin-top: 10px;
+    }
+
+    .price-enter-inpu:last-child{
+        margin-right: 10px;
     }
 }

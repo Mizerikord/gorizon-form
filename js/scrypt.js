@@ -14,11 +14,13 @@ const formPrev = document.querySelector(".mobile-prev");
 const formOpen = document.querySelector(".filter-bar");
 const regions = document.querySelectorAll(".drop-btn__name");
 const popup = document.querySelector(".popup");
+const location = document.querySelectorAll(".location");
 
 let popupState = "";
 let currentPopupState = "";
 let stepsState = [];
-
+let localState = document.querySelector(".location_checked");
+const userData = {};
 
 //раскрытие списка фильтров
 
@@ -28,7 +30,7 @@ document.addEventListener("click", (e) => {
         closePopup();
         return;
     }
-})
+});
 
 //Закрываем доп секцию
 document.querySelector(".filter-bar-bottom").style.display = "none";
@@ -64,6 +66,33 @@ regions.forEach((reg) => {
         currentPopupState.classList.add("popup-enable");
         showRegions(e.target.parentNode.id);
         return;
+    })
+})
+
+//обработчики на выбор локаций
+location.forEach((local) => {
+    local.addEventListener("click", (e) => {
+        if (local.classList.contains("location_checked")) {
+            return;
+        }
+        local.classList.add("location_checked");
+        localState.classList.remove("location_checked");
+        localState = document.querySelector(".location_checked");
+        console.log(localState, localState.value);
+        switch (localState.value) {
+            case "Районы":
+                showRegions("regions");
+                popupState = "regions";
+                break;
+            case "Метро":
+                showRegions("subways");
+                popupState = "subways";
+                break;
+            case "Локации":
+                showRegions("locations");
+                popupState = "locations";
+                break;
+        }
     })
 })
 
@@ -146,7 +175,7 @@ function createMathPrice(data) {
 function showRegions(option) {
     const selectList = currentPopupState.querySelector(".select-list");
     currentPopupState.querySelectorAll(".select-item").forEach(el => selectList.removeChild(el));
-    const currentOption = data[option];
+    const currentOption = data[option].sort();
     currentOption.forEach((elem) => {
         const li = selectList.appendChild(document.createElement("li"));
         li.classList.add("select-item");
@@ -156,3 +185,19 @@ function showRegions(option) {
         li.innerText = elem;
     })
 }
+
+//Вешаем обработчик на подтверждение данных\
+document.querySelectorAll(".confirm").forEach((elem)=>[
+    elem.addEventListener("click", () => {
+        const selectedData = elem.closest(".popup-enable").querySelectorAll(".select-item_active");
+        let newData = []
+        selectedData.forEach((elem) => {
+            newData.push(elem.innerText);
+        });
+        userData[popupState] = newData;
+        console.log(userData);
+    })
+])
+
+//Создание сборщика данных
+
