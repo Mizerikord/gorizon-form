@@ -1,0 +1,663 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.holder {
+    display: none;
+}
+
+.filter-wrapper {
+    max-width: 1114px;
+    width: 100%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
+    position: relative;
+}
+
+.smartfilter {
+    padding: 28px 28px 10px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.drop-filter-bar {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.drop-filter {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+/* выпадающие списки + "показать" шрифт Lato*/
+.drop-btn {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    outline: 1px solid #666;
+    width: 100%;
+    height: 38px;
+    position: relative;
+}
+
+.drop-filter_add {
+    padding-bottom: 0;
+}
+
+.drop-btn__name {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1em;
+    background-image: url(../media/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: right 10px bottom 10px;
+    cursor: pointer;
+    padding: 0 25px 0 10px;
+}
+
+/* .drop-btn__name::after{
+    display: inline-block;
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-bottom: 2px solid #1ab9db;
+    border-right: 2px solid #1ab9db;
+    rotate: 45deg;
+    text-align: center;
+    margin-left: 10px;
+} */
+
+
+.drop-btn__img {
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+}
+
+.filter-result-btn {
+    width: 215px;
+    height: 44px;
+    border: none;
+    border-radius: 22px;
+    background-color: #1ab9db;
+    color: #ffffff;
+}
+
+.input-default {
+    width: 100%;
+    height: 38px;
+    overflow: hidden;
+    border: none;
+    outline: 1px solid #666;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin-bottom: 15px;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff url(https://gorizont-spb.com/local/templates/horizont/img/svg-icons/home/magnifying-glass.svg) no-repeat center right 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.advanced-search-nav {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+    font-family: 'Lato';
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.3em;
+}
+
+.search-checkbox-description {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato';
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.3em;
+    text-wrap: none;
+    color: #666;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.search-checkbox-add::before {
+    display: inline-block;
+    content: "+";
+    width: 14px;
+    height: 14px;
+    border: 1px solid #1ab9db;
+    border-radius: 50%;
+    background-color: #1ab9db;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    margin-right: 10px;
+}
+
+.search-checkbox-add_active::before {
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+}
+
+.search-checkbox-add {
+    display: inline-flex;
+    align-items: center;
+}
+
+.search-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.search-checkbox {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.search-checkbox {
+    content: url(../media/checked-svgrepo-com.svg);
+    transition-duration: 0.5s;
+}
+
+.description-hover {
+    display: flex;
+    transition-duration: 0.5s;
+}
+
+.description-hover:hover {
+    color: #1ab9db;
+    transition-duration: 0.5s;
+}
+
+.float {
+    float: left;
+    width: 100%;
+}
+
+.description-hover::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 1px solid #1ab9db;
+    transition-duration: 0.1s;
+    margin-right: 12px;
+}
+
+.description-hover_active::before {
+    display: inline-block;
+    content: "";
+    width: 12px;
+    height: 6px;
+    transform: rotate(-45deg);
+    text-align: center;
+    border: 2px solid #1ab9db;
+    border-top: 0px;
+    border-right: 0px;
+    transition-duration: 0.1s;
+}
+
+/* Раскрывающаяся секция */
+
+.filter-bar-bottom {
+    /* вернуть none */
+    display: none;
+    transition: 0.5s;
+}
+
+.drop-filter {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+}
+
+.drop-filter_add {
+    padding-bottom: 0;
+}
+
+.drop-header {
+    margin: 0 0 4px 0;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1em;
+    color: #666;
+}
+
+.drop-btn-counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.input-counter {
+    width: calc(100%/2 - 5px);
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    height: 38px;
+    border: none;
+    outline: 1px solid #666;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.mobile-nav-filter {
+    display: none;
+}
+
+.mobile-prev {
+    display: none;
+    width: 100%;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1em;
+    color: #666;
+}
+
+.mobile-prev::after {
+    content: url(../media/equalizer-fill.svg);
+    width: 20px;
+    height: 20px;
+    padding-left: 5px;
+    opacity: 0.5;
+}
+
+.drop-filter-open {
+    padding-bottom: 20px;
+}
+
+.filter-result-btn_open {
+    display: none;
+}
+
+.popup {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 38px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .3);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #fff;
+    z-index: 9;
+    box-sizing: border-box;
+}
+
+.regions {
+    width: 300px;
+    left: -10px;
+}
+
+.building_deadlines,
+.rooms,
+.pay {
+    width: calc(100% + 20px);
+    right: -30px;
+    left: -10px;
+}
+
+.price {
+    width: 400px;
+    right: -10px;
+    left: auto;
+}
+
+.price-enter-input {
+    height: 40px;
+    padding: 0 10px;
+}
+
+.popup-enable {
+    display: flex;
+}
+
+.popup-select {
+    width: 100%;
+}
+
+.popup-select_price {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.select-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    max-height: 207px;
+    width: 100%;
+    padding: 0;
+    margin: 20px 0 0;
+    overflow: auto;
+}
+
+.select-item {
+    transition-duration: 0.5s;
+    color: #666;
+    cursor: pointer;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.select-item:hover {
+    transition-duration: 0.5s;
+    color: #1ab9db;
+}
+
+.select-item::before {
+    display: inline-block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    border: 1px solid #1ab9db;
+    transition-duration: 0.1s;
+    margin-right: 5px;
+}
+
+.select-item_active::before {
+    display: inline-block;
+    content: "";
+    width: 12px;
+    height: 6px;
+    transform: rotate(-45deg);
+    text-align: center;
+    border: 2px solid #1ab9db;
+    border-top: 0px;
+    border-right: 0px;
+    transition-duration: 0.1s;
+}
+
+.price-select {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.price-enter-input {
+    width: 100%;
+}
+
+.search-location {
+    width: calc(100% - 20px);
+    height: 40px;
+    padding: 0 10px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid #666;
+}
+
+.locations {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.location {
+    border: none;
+    outline: 1px solid #1ab9db;
+    background-color: #fff;
+    height: 34px;
+    width: auto;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    color: #1ab9db;
+}
+
+.location_checked {
+    background-color: #1ab9db;
+    color: #ffffff;
+}
+
+.popup-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.reset {
+    color: #1ab9db;
+    text-decoration: underline;
+}
+
+.confirm {
+    height: 22px;
+    width: auto;
+    color: #ffffff;
+    background-color: #1ab9db;
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    .filter-bar {
+        display: none;
+    }
+
+    .filter-bar_open {
+        display: flex;
+    }
+
+    .drop-filter-open {
+        padding-bottom: 90px;
+    }
+
+    .mobile-prev {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 40px;
+        border-bottom: 2px solid #b2b2b2;
+    }
+
+    .mobile-nav-filter {
+        width: 100%;
+        height: 64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10px;
+        border-bottom: 1px solid #b2b2b2;
+    }
+
+    .filter-back {
+        margin-left: 10px;
+        background-color: #ffffff;
+        border: none;
+        outline: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .filter-back::before {
+        content: url(../media/chevron-left.svg);
+        width: 10px;
+        height: 15px;
+        color: #1ab9db;
+        margin-right: 3px;
+    }
+
+    .filter-reset {
+        margin-right: 10px;
+        background-color: #ffffff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #1ab9db;
+        border-bottom: 1px solid #1ab9db;
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1em;
+        padding: 0;
+    }
+
+    .smartfilter {
+        width: 100%;
+        padding: 0;
+    }
+
+    .drop-filter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        gap: 0;
+        width: 100%;
+    }
+
+    .drop-btn {
+        width: 100%;
+        outline: none;
+        border-bottom: 1px solid #b2b2b2;
+        height: 50px;
+    }
+
+    .filter-result-btn {
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .search-checkbox-description {
+        margin-right: 10px;
+    }
+
+    .advanced-search-nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        height: 50px;
+    }
+
+    .advanced-search-nav_add {
+        border-bottom: 1px solid #b2b2b2;
+    }
+
+    .input-default {
+        outline: none;
+        border-bottom: 1px solid #b2b2b2;
+        height: 50px;
+        margin: 0;
+    }
+
+    .filter-bar-bottom {
+        width: 100%;
+    }
+
+    .drop-btn-counter {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-container {
+        display: flex;
+        margin: 0 10px;
+    }
+
+    .input-counter {
+        width: calc(100%/2 - 2%);
+        display: flex;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        height: 38px;
+        border: none;
+        outline: 1px solid #666;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    .input-group {
+        width: 97%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .drop-header {
+        align-self: start;
+        font-weight: 700;
+    }
+
+    .filter-result-btn_open {
+        margin-bottom: 5px;
+        display: flex;
+    }
+
+    .filter-result-btn_close {
+        display: none;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="mobile-nav-filter">
+        <p class="filter-back">Назад</p>
+        <input type="button" value="Сбросить все" class="filter-reset">
+    </div>
+    <div class="mobile-prev">&nbsp; Фильтр</div>
+    <section class="filter-wrapper">
+        <div class="filter-bar">
+            <form action="" class="smartfilter">
+                <div class="drop-filter-bar">
+                    <div id="drop-close" class="drop-filter">
+                        <div id="regions" class="drop-btn">
+                            <p class="drop-btn__name">Районы, локации</p>
+                        </div>
+                        <div id="building_deadlines" class="drop-btn">
+                            <p class="drop-btn__name">Срок сдачи</p>
+                        </div>
+                        <div id="rooms" class="drop-btn">
+                            <p class="drop-btn__name">Тип квартиры</p>
+                        </div>
+                        <div id="price" class="drop-btn">
+                            <p class="drop-btn__name">Цена, тыс. руб.</p>
+                        </div>
+                        <input id="result-btn" type="button" class="filter-result-btn" value="Показать">
+                        <label for="" class="input-default">
+                            <input type="text" name="search" id="search-area" class="search-input"
+                                placeholder="Поиск по названию застройщика или ЖК">
+                        </label>
+                        <div class="advanced-search-nav">
+                            <div class="search-map search-box">
+                                <p class="search-checkbox-description description-hover">Показать объекты на карте
+                                </p>
+                            </div>
+                            <div class="add-search-nav search-box" for="add-more">
+                                <p class="search-checkbox-description search-checkbox-add">Расширенный поиск</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-bar-bottom">
+                    <div id="drop-open" class="drop-filter">
+                        <div id="pay" class="drop-btn">
+                            <p class="drop-btn__name">оплата</p>
+                        </div>
+                        <div id="decorate" class="drop-btn">
+                            <p class="drop-btn__name">Отделака</p>
+                        </div>
+                        <div id="city" class="drop-btn">
+                            <p class="drop-btn__name">Город и обл.</p>
+                        </div>
+                        <div class="drop-btn-hidden">
+                        </div>
+                        <div class="drop-btn-hidden">
+                        </div>
+                        <div class="drop-btn-counter">
+                            <div class="input-group">
+                                <h3 class="drop-header">S общая, кв.м</h3>
+                                <div class="input-container">
+                                    <input type="text" class="input-counter" placeholder="От">
+                                    <input type="text" class="input-counter" placeholder="До">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop-btn-counter">
+                            <div class="input-group">
+                                <h3 class="drop-header">S кухни, кв.м</h3>
+                                <div class="input-container">
+                                    <input type="text" class="input-counter" placeholder="От">
+                                    <input type="text" class="input-counter" placeholder="До">
+                                </div>
+                            </div>
+                        </div>
+                        <input id="result-btn-add" type="button" class="filter-result-btn" value="Показать">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="popup regions">
+            <div class="locations">
+                <input type="button" value="Районы" class="location location_checked">
+                <input type="button" value="Метро" class="location">
+                <input type="button" value="Локации" class="location">
+            </div>
+            <input type="text" name="select-location" id="select-location" class="search-location"
+                placeholder="Введите название">
+            <div class="popup-select">
+                <ul class="select-list">
+                </ul>
+            </div>
+            <div class="popup-btn-container">
+                <p class="reset">Сбросить</p>
+                <input type="button" class="confirm" value="Ok">
+            </div>
+        </div>
+        <div class="popup building_deadlines rooms">
+            <div class="popup-select">
+                <ul class="select-list">
+                </ul>
+            </div>
+            <div class="popup-btn-container">
+                <p class="reset">Сбросить</p>
+                <input type="button" class="confirm" value="Ok">
+            </div>
+        </div>
+        <div class="popup price">
+            <div class="price-select">
+                <input type="text" class="price-enter-input" placeholder="От">
+                <input type="text" class="price-enter-input" placeholder="До">
+            </div>
+            <div class="popup-select popup-select_price">
+                <ul class="select-list select-list_start">
+                </ul>
+                <ul class="select-list select-list_stop">
+                </ul>
+            </div>
+            <div class="popup-btn-container">
+                <p class="reset">Сбросить</p>
+                <input type="button" class="confirm" value="Ok">
+            </div>
+        </div>
+        <div class="popup pay decorate city">
+            <div class="popup-select">
+                <ul class="select-list">
+                </ul>
+            </div>
+            <div class="popup-btn-container">
+                <input type="button" class="confirm" value="Ok">
+            </div>
+        </div>
+    </section>
+</body>
+<script type="module" src="./js/utils/data.js"></script>
+<script type="module" src="./js/scrypt.js"></script>
+
+</html>
