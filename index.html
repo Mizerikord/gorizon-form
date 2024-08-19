@@ -47,6 +47,12 @@
                         </div>
                     </div>
                 </div>
+                <!-- <p class="radio-text">
+                    <input type="radio" name="price" class="select-price-radio" value="radio">ererere
+                </p>
+                <p class="radio-text">
+                    <input type="radio" name="price" class="select-price-radio" value="radio">ererere
+                </p> -->
                 <div class="filter-bar-bottom">
                     <div id="drop-open" class="drop-filter">
                         <div id="pay" class="drop-btn">
@@ -84,59 +90,84 @@
                     </div>
                 </div>
             </form>
-        </div>
-        <div class="popup regions">
-            <div class="locations">
-                <input type="button" value="Районы" class="location location_checked">
-                <input type="button" value="Метро" class="location">
-                <input type="button" value="Локации" class="location">
-            </div>
-            <input type="text" name="select-location" id="select-location" class="search-location"
-                placeholder="Введите название">
-            <div class="popup-select">
-                <ul class="select-list">
+            <div class="selected-points">
+                <ul class="selected-list">
+    
                 </ul>
-            </div>
-            <div class="popup-btn-container">
-                <p class="reset">Сбросить</p>
-                <input type="button" class="confirm" value="Ok">
+                <p class="selected-clear">Сбросить</p>
             </div>
         </div>
-        <div class="popup building_deadlines rooms">
-            <div class="popup-select">
-                <ul class="select-list">
-                </ul>
+        
+        <template class="regions">
+            <div class="popup">
+                <div class="locations">
+                    <input type="button" value="Районы" class="location location_checked">
+                    <input type="button" value="Метро" class="location">
+                    <input type="button" value="Локации" class="location">
+                </div>
+                <input type="text" name="select-location" id="select-location" class="search-location"
+                    placeholder="Введите название">
+                <div class="popup-select">
+                    <ul class="select-list">
+                    </ul>
+                </div>
+                <div class="popup-btn-container">
+                    <p class="reset">Сбросить</p>
+                    <input type="button" class="confirm" value="Ok">
+                </div>
             </div>
-            <div class="popup-btn-container">
-                <p class="reset">Сбросить</p>
-                <input type="button" class="confirm" value="Ok">
+        </template>
+
+        <template class="building_deadlines rooms">
+            <div class="popup">
+                <div class="popup-select">
+                    <ul class="select-list">
+                    </ul>
+                </div>
+                <div class="popup-btn-container">
+                    <p class="reset">Сбросить</p>
+                    <input type="button" class="confirm" value="Ok">
+                </div>
             </div>
-        </div>
-        <div class="popup price">
-            <div class="price-select">
-                <input type="text" class="price-enter-input" placeholder="От">
-                <input type="text" class="price-enter-input" placeholder="До">
+        </template>
+        
+        <template class="price">
+            <div class="popup">
+                <div class="price-select">
+                    <input type="text" class="price-enter-input" placeholder="От">
+                    <input type="text" class="price-enter-input" placeholder="До">
+                </div>
+                <div class="popup-select popup-select_price">
+                    <ul class="select-list select-list_start">
+                    </ul>
+                    <ul class="select-list select-list_stop">
+                    </ul>
+                </div>
+                <div class="popup-btn-container">
+                    <p class="reset">Сбросить</p>
+                    <input type="button" class="confirm" value="Ok">
+                </div>
             </div>
-            <div class="popup-select popup-select_price">
-                <ul class="select-list select-list_start">
-                </ul>
-                <ul class="select-list select-list_stop">
-                </ul>
+        </template>
+        
+        <template class="pay decorate city">
+            <div class="popup">
+                <div class="popup-select">
+                    <ul class="select-list">
+                    </ul>
+                </div>
+                <div class="popup-btn-container">
+                    <input type="button" class="confirm" value="Ok">
+                </div>
             </div>
-            <div class="popup-btn-container">
-                <p class="reset">Сбросить</p>
-                <input type="button" class="confirm" value="Ok">
-            </div>
-        </div>
-        <div class="popup pay decorate city">
-            <div class="popup-select">
-                <ul class="select-list">
-                </ul>
-            </div>
-            <div class="popup-btn-container">
-                <input type="button" class="confirm" value="Ok">
-            </div>
-        </div>
+        </template>
+        
+        <template id="priceradio">
+            <li class="radio-elem">
+                <input type="radio" name="price" class="select-price-radio" id="">
+                <label class="radio-text" for=""></label>
+            </li>
+        </template>
     </section>
 </body>
 <script type="module" src="./js/utils/data.js"></script>

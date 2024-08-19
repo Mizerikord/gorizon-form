@@ -12,9 +12,10 @@ const filterResultBtnOpen = document.querySelector("#result-btn-add");
 const filterResultBtn = document.querySelector("#result-btn");
 const formPrev = document.querySelector(".mobile-prev");
 const formOpen = document.querySelector(".filter-bar");
-const regions = document.querySelectorAll(".drop-btn__name");
-const popup = document.querySelector(".popup");
+const detailsBtn = document.querySelectorAll(".drop-btn__name");
 const location = document.querySelectorAll(".location");
+const templatePrice = document.querySelector("#priceradio");
+const popup = document.querySelector(".popup");
 
 let popupState = "";
 let currentPopupState = "";
@@ -43,33 +44,44 @@ formPrev.addEventListener("click", () => {
 })
 
 //Вешаем обработчики на раскрытие попапа при клике на окна
-regions.forEach((reg) => {
+detailsBtn.forEach((reg) => {
     reg.addEventListener("click", (e) => {
-        if (popupState === e.target.parentNode.id) {
+        const correctBox = e.target.parentNode;
+        console.log(correctBox.id);
+        
+        const currentPopupTemplate = document.querySelector(`.${correctBox.id}`);
+        if (popupState === correctBox.id) {
             closePopup();
             return;
         }
-        if (popupState !== e.target.parentNode.id && popupState !== "") {
+        if (popupState !== correctBox.id && popupState !== "") {
             closePopup();
         }
-        if (e.target.parentNode.id === "price") {
-            currentPopupState = document.querySelector(`.${e.target.parentNode.id}`);
-            popupState = e.target.parentNode.id;
-            e.target.parentNode.appendChild(currentPopupState);
-            currentPopupState.classList.add("popup-enable");
-            createMathPrice(data)
-            return;
-        }
-        currentPopupState = document.querySelector(`.${e.target.parentNode.id}`);
-        popupState = e.target.parentNode.id;
-        e.target.parentNode.appendChild(currentPopupState);
+        const selectedPopup = currentPopupTemplate.content.cloneNode(true);
+        correctBox.append(selectedPopup);
+        currentPopupState = correctBox.querySelector(".popup");
         currentPopupState.classList.add("popup-enable");
-        showRegions(e.target.parentNode.id);
+        currentPopupState.classList.add(`${correctBox.id}`);
+        //вешаем обработчик подтверждения
+        currentPopupState.querySelector(".confirm").addEventListener("click", () => { 
+            addConfirm(currentPopupState.querySelector(".confirm"), correctBox.id) });
+        //вешаем сброс
+        if(correctBox.id === "pay" || "city" || "decorate"){
+            console.log("non-reset");
+        } else {
+            currentPopupState.querySelector(".reset").addEventListener("click", () => { clearChecked(currentPopupState.querySelector(".reset")) });
+        }
+        if (correctBox.id === "price") {
+            createMathPrice(data);
+        } else {
+            showRegions(correctBox.id);
+        }
+        popupState = correctBox.id;
         return;
     })
 })
 
-//обработчики на выбор локаций
+//Вешаем обработчики на выбор локаций
 location.forEach((local) => {
     local.addEventListener("click", (e) => {
         if (local.classList.contains("location_checked")) {
@@ -129,7 +141,15 @@ function closePopup() {
     if (currentPopupState === "") {
         return;
     }
+    if (popupState === "pay" || "city" || "decorate"){
+        console.log("non-reset");
+    } else {
+        clearChecked(currentPopupState.querySelector(".reset"));currentPopupState.querySelector(".reset").removeEventListener("click", () => { addConfirm(clearChecked(currentPopupState.querySelector(".reset"))) });
+    }
+    currentPopupState.querySelector(".confirm").removeEventListener("click", () => { addConfirm(addConfirm(currentPopupState.querySelector(".confirm"))) });
+    
     currentPopupState.classList.remove("popup-enable");
+    currentPopupState.classList.remove(`${popupState}`);
     popupState = "";
     currentPopupState = "";
     stepsState = [];
@@ -140,64 +160,98 @@ function createMathPrice(data) {
     const selectList = currentPopupState.querySelectorAll(".select-list");
     const minPrice = Math.floor(data.prices_min / 100000) * 100000;
     const maxPrice = Math.ceil(data.prices_max / 100000) * 100000;
-
+    const selectListStart = currentPopupState.querySelector(".select-list_start");
+    const selectListStop = currentPopupState.querySelector(".select-list_stop");
     for (let i = minPrice; i < maxPrice; i += 1000000) {
         stepsState.push(i);
     }
-
-    const selectListStart = currentPopupState.querySelector(".select-list_start");
-    const selectListStop = currentPopupState.querySelector(".select-list_stop");
-
     selectList.forEach((list) => {
         list.querySelectorAll(".select-item").forEach(el => list.removeChild(el))
     })
-
-    stepsState.forEach((elem) => {
-        const li = selectListStart.appendChild(document.createElement("li"));
-        li.classList.add("select-item");
-        li.addEventListener("click", () => {
-            li.classList.toggle("select-item_active");
-        })
-        li.innerText = elem;
+    stepsState.forEach((elem, index) => {
+        const item = templatePrice.content.cloneNode(true);
+        createElement(item, "priceStart", elem, index);
+        selectListStart.append(item);
     })
-
     stepsState.forEach((elem) => {
-        const li = selectListStop.appendChild(document.createElement("li"));
-        li.classList.add("select-item");
-        li.addEventListener("click", () => {
-            li.classList.toggle("select-item_active");
-        })
-        li.innerText = elem;
+        const item = templatePrice.content.cloneNode(true);
+        createElement(item, "priceStop", elem, elem);
+        selectListStop.append(item);
     })
 }
+//создание списка ценового диапазона
+function createElement(item, name, elem, pos) {
+    item.querySelector(".select-price-radio").id = pos;
+    item.querySelector(".select-price-radio").name = name;
+    item.querySelector(".radio-text").htmlFor = pos;
+    item.querySelector(".radio-text").innerText = elem;
+}
 
-//подгрузка данных из api
+//Загрузка данных из api
 function showRegions(option) {
     const selectList = currentPopupState.querySelector(".select-list");
     currentPopupState.querySelectorAll(".select-item").forEach(el => selectList.removeChild(el));
     const currentOption = data[option].sort();
     currentOption.forEach((elem) => {
-        const li = selectList.appendChild(document.createElement("li"));
-        li.classList.add("select-item");
-        li.addEventListener("click", () => {
-            li.classList.toggle("select-item_active");
-        })
-        li.innerText = elem;
+        const item = templatePrice.content.cloneNode(true);
+        item.querySelector(".select-price-radio").type = "checkbox";
+        item.querySelector(".select-price-radio").id = elem;
+        item.querySelector(".select-price-radio").name = option;
+        item.querySelector(".radio-text").htmlFor = elem;
+        item.querySelector(".radio-text").innerText = elem;
+        selectList.append(item);
     })
 }
 
-//Вешаем обработчик на подтверждение данных\
-document.querySelectorAll(".confirm").forEach((elem)=>[
-    elem.addEventListener("click", () => {
-        const selectedData = elem.closest(".popup-enable").querySelectorAll(".select-item_active");
-        let newData = []
+//Вешаем обработчик на подтверждение данных
+function addConfirm(btn, elemId) {
+    const selectedData = btn.closest(".popup").querySelectorAll(".select-price-radio:checked");
+    if (selectedData.length === 0) {
+        return;
+    }
+    let newData = [];
+    if (elemId === "price") {
+        userData["prices_min"] = selectedData[0].nextElementSibling.textContent;
+        userData["prices_max"] = selectedData[1].nextElementSibling.textContent;
+        showEnters()
+    } else {
         selectedData.forEach((elem) => {
-            newData.push(elem.innerText);
+            newData.push(elem.id);
         });
         userData[popupState] = newData;
-        console.log(userData);
-    })
-])
+        showEnters()
+    }
+    console.log(Object.values(userData));
+    console.log(userData);
+    closePopup();
+}
 
-//Создание сборщика данных
+//обработчик сброса данных
+function clearChecked(reset) {
+    const resetElem = reset.parentNode.previousElementSibling.querySelectorAll(".select-price-radio:checked");
+    resetElem.forEach((elem) => {
+        elem.checked = false;
+    })
+}
+//Добавление данных к нижнему фильтру + общему сбросу
+function showEnters(){
+    const saveArea = document.querySelector(".selected-points");
+    saveArea.classList.add("selected-points_active");
+    const saveList = saveArea.querySelector(".selected-list");
+    let showData = [];
+    showData = Object.values(userData).flat();
+    console.log(showData);
+    showData.forEach(elem => {
+        const li = document.createElement("li");
+        li.classList.add("selected-item");
+        const text = document.createTextNode(elem);
+        li.appendChild(text);
+        saveList.appendChild(li);
+    })
+}
+
+//общий сброс
+//Поиск но названию
+//отправка
+//Отправка данных
 
