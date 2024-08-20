@@ -11,17 +11,23 @@ const formFilterBarBottom = document.querySelector(".filter-bar-bottom");
 const filterResultBtnOpen = document.querySelector("#result-btn-add");
 const filterResultBtn = document.querySelector("#result-btn");
 const formPrev = document.querySelector(".mobile-prev");
+const formPrevBack = document.querySelector(".filter-back");
 const formOpen = document.querySelector(".filter-bar");
 const detailsBtn = document.querySelectorAll(".drop-btn__name");
 const location = document.querySelectorAll(".location");
 const templatePrice = document.querySelector("#priceradio");
 const popup = document.querySelector(".popup");
+const saveArea = document.querySelector(".selected-points");
+const savedList = document.querySelector(".selected-list");
+const savedListClener = document.querySelectorAll(".selected-clear");
 
 let popupState = "";
 let currentPopupState = "";
 let stepsState = [];
 let localState = document.querySelector(".location_checked");
 const userData = {};
+let isAdvancedSearchOpen = false;
+let isAddFilters = false;
 
 //раскрытие списка фильтров
 
@@ -38,9 +44,15 @@ document.querySelector(".filter-bar-bottom").style.display = "none";
 
 //Вешаем обработчики на внешние элементы
 formElemOpen.addEventListener("click", () => { openForm() })
-formMapElem.addEventListener("click", () => { checkVisibleMap() })
+//Отобразить на карте - не работает !!!!переделать
+// formMapElem.addEventListener("click", () => { checkVisibleMap() })
+//Раскрытие фильтра
 formPrev.addEventListener("click", () => {
     formOpen.classList.toggle("filter-bar_open");
+})
+//кнопка "Назад"
+formPrevBack.addEventListener("click", () => {
+    formOpen.classList.remove("filter-bar_open");
 })
 
 //Вешаем обработчики на раскрытие попапа при клике на окна
@@ -48,7 +60,7 @@ detailsBtn.forEach((reg) => {
     reg.addEventListener("click", (e) => {
         const correctBox = e.target.parentNode;
         console.log(correctBox.id);
-        
+
         const currentPopupTemplate = document.querySelector(`.${correctBox.id}`);
         if (popupState === correctBox.id) {
             closePopup();
@@ -63,10 +75,12 @@ detailsBtn.forEach((reg) => {
         currentPopupState.classList.add("popup-enable");
         currentPopupState.classList.add(`${correctBox.id}`);
         //вешаем обработчик подтверждения
-        currentPopupState.querySelector(".confirm").addEventListener("click", () => { 
-            addConfirm(currentPopupState.querySelector(".confirm"), correctBox.id) });
+        currentPopupState.querySelector(".confirm").addEventListener("click", () => {
+            addConfirm(currentPopupState.querySelector(".confirm"), correctBox.id);
+            showEnters();
+        });
         //вешаем сброс
-        if(correctBox.id === "pay" || "city" || "decorate"){
+        if (correctBox.id === "pay" || "city" || "decorate") {
             console.log("non-reset");
         } else {
             currentPopupState.querySelector(".reset").addEventListener("click", () => { clearChecked(currentPopupState.querySelector(".reset")) });
@@ -120,13 +134,14 @@ function openForm() {
 }
 
 //галочка на "показать объекты на карте"
-function checkVisibleMap() {
-    formDescriptionEl.classList.toggle("description-hover_active");
-    return;
-}
+// function checkVisibleMap() {
+//     formDescriptionEl.classList.toggle("description-hover_active");
+//     return;
+// }
 
 //Перенос кнопки --Показать-- со всеми изменениями формы
 function replaceElem() {
+    isAdvancedSearchOpen = !isAdvancedSearchOpen;
     formCheckBox.classList.toggle("search-checkbox-add_active");
     formAdvancedSearchNav.classList.toggle("advanced-search-nav_add");
     formDropFilter.classList.toggle("drop-filter_add");
@@ -141,13 +156,13 @@ function closePopup() {
     if (currentPopupState === "") {
         return;
     }
-    if (popupState === "pay" || "city" || "decorate"){
+    if (popupState === "pay" || "city" || "decorate") {
         console.log("non-reset");
     } else {
-        clearChecked(currentPopupState.querySelector(".reset"));currentPopupState.querySelector(".reset").removeEventListener("click", () => { addConfirm(clearChecked(currentPopupState.querySelector(".reset"))) });
+        clearChecked(currentPopupState.querySelector(".reset")); currentPopupState.querySelector(".reset").removeEventListener("click", () => { addConfirm(clearChecked(currentPopupState.querySelector(".reset"))) });
     }
     currentPopupState.querySelector(".confirm").removeEventListener("click", () => { addConfirm(addConfirm(currentPopupState.querySelector(".confirm"))) });
-    
+
     currentPopupState.classList.remove("popup-enable");
     currentPopupState.classList.remove(`${popupState}`);
     popupState = "";
@@ -233,11 +248,11 @@ function clearChecked(reset) {
         elem.checked = false;
     })
 }
+
 //Добавление данных к нижнему фильтру + общему сбросу
-function showEnters(){
-    const saveArea = document.querySelector(".selected-points");
+function showEnters() {
+    resetSavedList();
     saveArea.classList.add("selected-points_active");
-    const saveList = saveArea.querySelector(".selected-list");
     let showData = [];
     showData = Object.values(userData).flat();
     console.log(showData);
@@ -246,11 +261,44 @@ function showEnters(){
         li.classList.add("selected-item");
         const text = document.createTextNode(elem);
         li.appendChild(text);
-        saveList.appendChild(li);
-    })
+        savedList.insertBefore(li, savedList.firstChild);
+        removeSelf(li, savedList)
+        isAddFilters = true;
+    });
+    formDropFilterOpen.classList.add("drop-filter-open_add");
+    clearCheckElements();
 }
 
 //общий сброс
+savedListClener.forEach(elem => elem.addEventListener("click", () => resetSavedList()));
+function resetSavedList() {
+    isAddFilters = false;
+    while (savedList.firstChild) {
+        if(savedList.firstChild.nodeName === "P"){
+            saveArea.classList.remove("selected-points_active");
+            formDropFilterOpen.classList.remove("drop-filter-open_add");
+            clearCheckElements();
+            return;
+        }
+        savedList.removeChild(savedList.firstChild);
+    };
+}
+
+//Сброс состояний радио-кнопок
+function clearCheckElements(){
+    document.querySelectorAll(".select-price-radio").forEach(elem => elem.checked = false);
+}
+
+//Вешаем удаление из списка единичному элементу при клике на него
+function removeSelf(item, perent){
+    item.addEventListener("click", () => {
+        perent.removeChild(item);
+        if (perent.firstChild.nodeName === "P"){
+            saveArea.classList.remove("selected-points_active");
+            formDropFilterOpen.classList.remove("drop-filter-open_add");
+        }
+    })
+}
 //Поиск но названию
 //отправка
 //Отправка данных

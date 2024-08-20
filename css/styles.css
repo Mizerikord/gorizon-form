@@ -20,6 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    align-items: flex-start;
 }
 
 .drop-filter-bar {
@@ -217,28 +218,6 @@ body {
 .float {
     float: left;
     width: 100%;
-}
-
-.description-hover::before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    border: 1px solid #1ab9db;
-    transition-duration: 0.1s;
-    margin-right: 12px;
-}
-
-.description-hover_active::before {
-    display: inline-block;
-    content: "";
-    width: 12px;
-    height: 6px;
-    transform: rotate(-45deg);
-    text-align: center;
-    border: 2px solid #1ab9db;
-    border-top: 0px;
-    border-right: 0px;
-    transition-duration: 0.1s;
 }
 
 /* Раскрывающаяся секция */
@@ -526,7 +505,7 @@ body {
     font-size: 26px;
     transition: 500ms;
     overflow: hidden;
-    transition-duration: 0.5s;
+    transition-duration: 0.1s;
 }
 
 .select-price-radio:checked:before {
@@ -534,7 +513,7 @@ body {
     left: 0px;
     height: 8px;
     transform: rotate(-45deg);
-    transition-duration: 0.5s;
+    transition-duration: 0.1s;
     border-width: 3px;
     border-top: none;
     border-right: none;
@@ -573,7 +552,7 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
-    padding: 10px 28px;
+    padding: 10px 0;
 }
 
 .selected-points_active{
@@ -585,10 +564,11 @@ body {
     list-style-type: none;
     padding: 0;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
     gap: 7px;
+    margin: 0;
 }
 
 .selected-item{
@@ -616,11 +596,20 @@ body {
 .selected-clear{
     color: #1ab9db;
     text-decoration: underline;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.filter-result-slim{
+    display: none;
 }
 
 @media screen and (max-width: 767px) {
     .filter-bar {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .filter-bar_open {
@@ -628,7 +617,11 @@ body {
     }
 
     .drop-filter-open {
-        padding-bottom: 90px;
+        padding-bottom: 40px;
+    }
+
+    .drop-filter-open_add {
+        padding-bottom: 10px;
     }
 
     .mobile-prev {
@@ -644,6 +637,7 @@ body {
         height: 64px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: nowrap;
         align-items: center;
         margin: 0 10px;
         border-bottom: 1px solid #b2b2b2;
@@ -657,6 +651,7 @@ body {
         padding: 0;
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
 
     .filter-back::before {
@@ -664,7 +659,7 @@ body {
         width: 10px;
         height: 15px;
         color: #1ab9db;
-        margin-right: 3px;
+        margin-right: 5px;
     }
 
     .filter-reset {
@@ -685,6 +680,7 @@ body {
     .smartfilter {
         width: 100%;
         padding: 0;
+        padding-bottom: 50px;
     }
 
     .drop-filter {
@@ -701,11 +697,6 @@ body {
         outline: none;
         border-bottom: 1px solid #b2b2b2;
         height: 50px;
-    }
-
-    .filter-result-btn {
-        position: absolute;
-        bottom: 10px;
     }
 
     .search-checkbox-description {
@@ -772,12 +763,23 @@ body {
     }
 
     .filter-result-btn_open {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         display: flex;
     }
 
     .filter-result-btn_close {
         display: none;
+    }
+
+    .filter-result-wide{
+        display: none;
+    }
+
+    .filter-result-slim{
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        align-self: center;
     }
 
     .popup {
@@ -794,5 +796,9 @@ body {
 
     .price-enter-inpu:last-child {
         margin-right: 10px;
+    }
+
+    .selected-list{
+        margin-bottom: 10px;
     }
 }

@@ -11,7 +11,7 @@
 <body>
     <div class="mobile-nav-filter">
         <p class="filter-back">Назад</p>
-        <input type="button" value="Сбросить все" class="filter-reset">
+        <p type="button" value="Сбросить все" class="selected-clear">Сбросить все</p>
     </div>
     <div class="mobile-prev">&nbsp; Фильтр</div>
     <section class="filter-wrapper">
@@ -31,15 +31,17 @@
                         <div id="price" class="drop-btn">
                             <p class="drop-btn__name">Цена, тыс. руб.</p>
                         </div>
-                        <input id="result-btn" type="button" class="filter-result-btn" value="Показать">
+                        <input id="result-btn" type="button" class="filter-result-btn filter-result-wide"
+                            value="Показать">
                         <label for="" class="input-default">
                             <input type="text" name="search" id="search-area" class="search-input"
                                 placeholder="Поиск по названию застройщика или ЖК">
                         </label>
                         <div class="advanced-search-nav">
-                            <div class="search-map search-box">
-                                <p class="search-checkbox-description description-hover">Показать объекты на карте
-                                </p>
+                            <div class="description-hover">
+                                <input type="checkbox" name="show-to-map" class="select-price-radio" id="show-to-map">
+                                <label class="search-checkbox-description" for="show-to-map">Показать объекты на
+                                    карте</label>
                             </div>
                             <div class="add-search-nav search-box" for="add-more">
                                 <p class="search-checkbox-description search-checkbox-add">Расширенный поиск</p>
@@ -47,12 +49,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <p class="radio-text">
-                    <input type="radio" name="price" class="select-price-radio" value="radio">ererere
-                </p>
-                <p class="radio-text">
-                    <input type="radio" name="price" class="select-price-radio" value="radio">ererere
-                </p> -->
                 <div class="filter-bar-bottom">
                     <div id="drop-open" class="drop-filter">
                         <div id="pay" class="drop-btn">
@@ -86,18 +82,19 @@
                                 </div>
                             </div>
                         </div>
-                        <input id="result-btn-add" type="button" class="filter-result-btn" value="Показать">
+
                     </div>
                 </div>
+                <div class="selected-points">
+                    <ul class="selected-list">
+                        <p class="selected-clear">Сбросить</p>
+                    </ul>
+                </div>
+                <input id="result-btn-add" type="button" class="filter-result-btn filter-result-slim" value="Показать">
             </form>
-            <div class="selected-points">
-                <ul class="selected-list">
-    
-                </ul>
-                <p class="selected-clear">Сбросить</p>
-            </div>
+
         </div>
-        
+
         <template class="regions">
             <div class="popup">
                 <div class="locations">
@@ -130,7 +127,7 @@
                 </div>
             </div>
         </template>
-        
+
         <template class="price">
             <div class="popup">
                 <div class="price-select">
@@ -149,7 +146,7 @@
                 </div>
             </div>
         </template>
-        
+
         <template class="pay decorate city">
             <div class="popup">
                 <div class="popup-select">
@@ -161,7 +158,7 @@
                 </div>
             </div>
         </template>
-        
+
         <template id="priceradio">
             <li class="radio-elem">
                 <input type="radio" name="price" class="select-price-radio" id="">
