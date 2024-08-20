@@ -43,9 +43,8 @@ document.addEventListener("click", (e) => {
 document.querySelector(".filter-bar-bottom").style.display = "none";
 
 //Вешаем обработчики на внешние элементы
-formElemOpen.addEventListener("click", () => { openForm() })
-//Отобразить на карте - не работает !!!!переделать
-// formMapElem.addEventListener("click", () => { checkVisibleMap() })
+formElemOpen.addEventListener("click", () => { openForm() });
+
 //Раскрытие фильтра
 formPrev.addEventListener("click", () => {
     formOpen.classList.toggle("filter-bar_open");
@@ -59,8 +58,6 @@ formPrevBack.addEventListener("click", () => {
 detailsBtn.forEach((reg) => {
     reg.addEventListener("click", (e) => {
         const correctBox = e.target.parentNode;
-        console.log(correctBox.id);
-
         const currentPopupTemplate = document.querySelector(`.${correctBox.id}`);
         if (popupState === correctBox.id) {
             closePopup();
@@ -104,7 +101,6 @@ location.forEach((local) => {
         local.classList.add("location_checked");
         localState.classList.remove("location_checked");
         localState = document.querySelector(".location_checked");
-        console.log(localState, localState.value);
         switch (localState.value) {
             case "Районы":
                 showRegions("regions");
@@ -133,12 +129,6 @@ function openForm() {
     return;
 }
 
-//галочка на "показать объекты на карте"
-// function checkVisibleMap() {
-//     formDescriptionEl.classList.toggle("description-hover_active");
-//     return;
-// }
-
 //Перенос кнопки --Показать-- со всеми изменениями формы
 function replaceElem() {
     isAdvancedSearchOpen = !isAdvancedSearchOpen;
@@ -159,7 +149,8 @@ function closePopup() {
     if (popupState === "pay" || "city" || "decorate") {
         console.log("non-reset");
     } else {
-        clearChecked(currentPopupState.querySelector(".reset")); currentPopupState.querySelector(".reset").removeEventListener("click", () => { addConfirm(clearChecked(currentPopupState.querySelector(".reset"))) });
+        clearChecked(currentPopupState.querySelector(".reset")); 
+        currentPopupState.querySelector(".reset").removeEventListener("click", () => { addConfirm(clearChecked(currentPopupState.querySelector(".reset"))) });
     }
     currentPopupState.querySelector(".confirm").removeEventListener("click", () => { addConfirm(addConfirm(currentPopupState.querySelector(".confirm"))) });
 
@@ -236,8 +227,6 @@ function addConfirm(btn, elemId) {
         userData[popupState] = newData;
         showEnters()
     }
-    console.log(Object.values(userData));
-    console.log(userData);
     closePopup();
 }
 
@@ -255,7 +244,6 @@ function showEnters() {
     saveArea.classList.add("selected-points_active");
     let showData = [];
     showData = Object.values(userData).flat();
-    console.log(showData);
     showData.forEach(elem => {
         const li = document.createElement("li");
         li.classList.add("selected-item");
@@ -270,11 +258,20 @@ function showEnters() {
 }
 
 //общий сброс
-savedListClener.forEach(elem => elem.addEventListener("click", () => resetSavedList()));
+savedListClener.forEach(elem => elem.addEventListener("click", () => {
+    deleteSelectedElements();
+    resetSavedList();
+}));
+
+//очистка выборки
+function deleteSelectedElements(){
+    for (let elem in userData) delete userData[elem];
+}
+
 function resetSavedList() {
     isAddFilters = false;
     while (savedList.firstChild) {
-        if(savedList.firstChild.nodeName === "P"){
+        if (savedList.firstChild.nodeName === "P") {
             saveArea.classList.remove("selected-points_active");
             formDropFilterOpen.classList.remove("drop-filter-open_add");
             clearCheckElements();
@@ -285,17 +282,18 @@ function resetSavedList() {
 }
 
 //Сброс состояний радио-кнопок
-function clearCheckElements(){
+function clearCheckElements() {
     document.querySelectorAll(".select-price-radio").forEach(elem => elem.checked = false);
 }
 
 //Вешаем удаление из списка единичному элементу при клике на него
-function removeSelf(item, perent){
+function removeSelf(item, perent) {
     item.addEventListener("click", () => {
         perent.removeChild(item);
-        if (perent.firstChild.nodeName === "P"){
+        if (perent.firstChild.nodeName === "P") {
             saveArea.classList.remove("selected-points_active");
             formDropFilterOpen.classList.remove("drop-filter-open_add");
+            return;
         }
     })
 }
