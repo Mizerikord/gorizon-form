@@ -1,5 +1,5 @@
 const data = {
-    "locations":[],
+    "locations": [],
     "regions": [
         "Кронштадтский р-н",
         "Гатчинский р-н",
@@ -2476,23 +2476,250 @@ const data = {
         "Hovard",
         "АПАРТАМЕНТЫ ПЕТЕРБУРГА"
     ],
-    "city":[
+    "city": [
         "Ленинградская область",
         "Санкт-петербург"
     ],
-    "decorate":[
+    "decorate": [
         "Без отделки",
         "Без стен",
         "Подчистова",
         "С мебелью",
         "Чистовая",
     ],
-    "pay":[
+    "pay": [
         "Военная ипотека",
         "Ипотека",
         "Субсидии"
     ]
 
 }
+
+const backData = [{
+    "block.block_id": "65ccb9342443e98579d1ff5d",
+    "block.name": "Коттеджный поселок «Экофорест»",
+    "block.address": [
+        "гп Токсово"
+    ],
+    "block.renderer": [
+        "https://cdn-dataout.trendagent.ru/images/93/sh/0b2440ad744852ccbf34b29ca243f11c.jpg",
+        "https://cdn-dataout.trendagent.ru/images/fd/wm/01bf5d8ee597f7e99f8bcf0067ff7bb8.jpg",
+        "https://cdn-dataout.trendagent.ru/images/ns/hi/8035df44aff3bec987c75eb8f4751bc5.jpg",
+        "https://cdn-dataout.trendagent.ru/images/6z/r0/98707a7d75b1af7e1fc0330d56c3313f.jpg",
+        "https://cdn-dataout.trendagent.ru/images/ru/5r/3431f792ea3bf5f082cb468e85b94235.jpg",
+        "https://cdn-dataout.trendagent.ru/images/rb/hz/933148281576fb316a0521543ad945d8.jpg",
+        "https://cdn-dataout.trendagent.ru/images/w4/dg/aa3841d96f4f5e80b9bf8d081b7f5e7b.jpg",
+        "https://cdn-dataout.trendagent.ru/images/il/hr/17523c63eb7ece713e98180a6ceda266.jpg",
+        "https://cdn-dataout.trendagent.ru/images/7c/li/904c212f785ba049a3ea5ef0d2643bbe.jpg",
+        "https://cdn-dataout.trendagent.ru/images/av/4q/14bb2ac562fae90dea1a6c85e65a7dbc.jpg"
+    ],
+    "block.geometry": {
+        "coordinates": [
+            30.607652930040835,
+            60.24562802394979
+        ],
+        "type": "Point"
+    },
+    "block.subway": [
+        {
+            "distance_time": 50,
+            "distance_type": 2,
+            "subway_name": "Парнас"
+        }
+    ],
+    "building_deadline_min": "3 квартал 2024",
+    "building_deadline_max": "3 квартал 2024",
+    "block_builder_name": [
+        "ФМ-строй"
+    ],
+    "finishing": [
+        "Подчистовая"
+    ],
+    "rooms": [
+        {
+            "Коттеджи": 11700000
+        }
+    ],
+    "building_subsidy": false,
+    "building_voen_mortgage": false,
+    "building_mortgage": true
+},
+{
+    "blockblock_id": "609bdeba84d8532da79cd6cd",
+    "block.name": "Морская миля",
+    "block.address": [
+        "ул Маршала Казакова"
+    ],
+    "block.renderer": [
+        "https://cdn-dataout.trendagent.ru/images/28/lq/5fdb26c542eb99d660cdf61230180513.jpg",
+        "https://cdn-dataout.trendagent.ru/images/og/lf/d1ff1434ba3769c47afa97faa5600fa0.jpg",
+        "https://cdn-dataout.trendagent.ru/images/dh/ty/ea927d0eb2b6e59e313bdfbb1c39f72e.jpg",
+        "https://cdn-dataout.trendagent.ru/images/9f/uu/78b464cc89608e109437faa55e182d9d.jpg",
+        "https://cdn-dataout.trendagent.ru/images/8m/8f/000fa215039b4d74c7104387e57d0a25.jpg",
+        "https://cdn-dataout.trendagent.ru/images/d1/8l/ee9af5218463fc7df3d6369f1205975f.jpg",
+        "https://cdn-dataout.trendagent.ru/images/ks/qd/bd2b0ba02f18da7ab62a41a236cd6ab5.jpg",
+        "https://cdn-dataout.trendagent.ru/images/6x/ok/8478a4a2c4868211ffde29a9e81566fa.jpg"
+    ],
+    "block.geometry": {
+        "coordinates": [
+            30.225148200988773,
+            59.86247435368631
+        ],
+        "type": "Point"
+    },
+    "block.subway": [
+        {
+            "distance_time": 10,
+            "distance_type": 2,
+            "subway_name": "Автово"
+        },
+        {
+            "distance_time": 10,
+            "distance_type": 2,
+            "subway_name": "Ленинский проспект"
+        },
+        {
+            "distance_time": 10,
+            "distance_type": 2,
+            "subway_name": "Кировский завод"
+        },
+        {
+            "distance_time": 15,
+            "distance_type": 2,
+            "subway_name": "Проспект Ветеранов"
+        }
+    ],
+    "building_deadline_min": "3 квартал 2025",
+    "building_deadline_max": "3 квартал 2025",
+    "block_builder_name": [
+        "ЛСР. Северо-Запад"
+    ],
+    "finishing": [
+        "Чистовая"
+    ],
+    "rooms": [
+        {
+            "Студии": 6310809
+        },
+        {
+            "2Е-к.кв": 9079144
+        },
+        {
+            "3Е-к.кв": 15317224
+        }
+    ],
+    "building_subsidy": false,
+    "building_voen_mortgage": true,
+    "building_mortgage": true
+},
+{
+    "block.block_id": "615ff095874e156ef310dd65",
+    "block.name": "Малая Финляндия",
+    "block.address": [
+        "г Выборг, наб Адмирала Чичагова"
+    ],
+    "block.renderer": [
+        "https://cdn-dataout.trendagent.ru/images/id/58/29b4f4479da9349956ddf766e3b70fa4.jpg",
+        "https://cdn-dataout.trendagent.ru/images/xc/dy/e67df6c9c8f2a928777a87408eccff14.jpg",
+        "https://cdn-dataout.trendagent.ru/images/mn/dn/76781031d97d0310c217ae80c3b3955a.jpg",
+        "https://cdn-dataout.trendagent.ru/images/qw/8u/e53b718a0a38c5494e960534335e5b24.jpg",
+        "https://cdn-dataout.trendagent.ru/images/k6/p4/bfd40a7a570611627dda25ce84515c38.jpg",
+        "https://cdn-dataout.trendagent.ru/images/ms/7o/bad7715d4f57280d000b3cf44a03cb25.jpg",
+        "https://cdn-dataout.trendagent.ru/images/nc/l8/e517514b1966408e2e3cd652bad830ac.jpg",
+        "https://cdn-dataout.trendagent.ru/images/ix/7i/747025c73644330e9269f8723858f70c.jpg",
+        "https://cdn-dataout.trendagent.ru/images/hq/h2/32f3f92d95272ab0c86042e0a705d63a.jpg"
+    ],
+    "block.geometry": {
+        "coordinates": [
+            28.75722348690033,
+            60.719941800348046
+        ],
+        "type": "Point"
+    },
+    "block.subway": [
+        {
+            "distance_time": 110,
+            "distance_type": 2,
+            "subway_name": "Площадь Ленина"
+        }
+    ],
+    "building_deadline_min": "Сдан",
+    "building_deadline_max": "4 квартал 2025",
+    "block_builder_name": [
+        "КапСтрой"
+    ],
+    "finishing": [
+        "Подчистовая"
+    ],
+    "rooms": [
+        {
+            "Студии": 5660690
+        },
+        {
+            "1-к.кв": 6800000
+        },
+        {
+            "2-к.кв": 10247600
+        },
+        {
+            "2Е-к.кв": 6631950
+        },
+        {
+            "3Е-к.кв": 9670000
+        },
+        {
+            "4Е-к.кв": 13578750
+        }
+    ],
+    "building_subsidy": false,
+    "building_voen_mortgage": true,
+    "building_mortgage": true
+},
+{
+    "block.block_id": "6634d663a6a0376ab403b325",
+    "block.name": "Коттеджный поселок «Экофорест» (ССК-Технологии)",
+    "block.address": [
+        "гп Токсово"
+    ],
+    "block.renderer": [
+        "https://cdn-dataout.trendagent.ru/images/dr/1d/617b8d26a0d32411b864879b31ba1f42.jpg",
+        "https://cdn-dataout.trendagent.ru/images/01/95/7d5849ad4eacc0546288d61546b8b38e.jpg",
+        "https://cdn-dataout.trendagent.ru/images/nl/ss/0f417990ff4b884c8763a2d8a9bf30e4.jpg",
+        "https://cdn-dataout.trendagent.ru/images/6s/fh/2d9ac1dd3e780483705dfa7aa30487ec.jpg",
+        "https://cdn-dataout.trendagent.ru/images/qn/y4/bef80675a567d912ec7b9e7b7f8f5123.jpg",
+        "https://cdn-dataout.trendagent.ru/images/ld/k9/4b628e56464f7b0109f11fbb79e8fd4e.jpg"
+    ],
+    "block.geometry": {
+        "type": "Point",
+        "coordinates": [
+            30.61212039781395,
+            60.240561859484124
+        ]
+    },
+    "block.subway": [
+        {
+            "distance_time": 50,
+            "distance_type": 2,
+            "subway_name": "Парнас"
+        }
+    ],
+    "building_deadline_min": "3 квартал 2024",
+    "building_deadline_max": "3 квартал 2024",
+    "block_builder_name": [
+        "ССК-Технологии"
+    ],
+    "finishing": [
+        "Подчистовая"
+    ],
+    "rooms": [
+        {
+            "Коттеджи": 8200000
+        }
+    ],
+    "building_subsidy": false,
+    "building_voen_mortgage": false,
+    "building_mortgage": true
+}
+]
 
 export default data;

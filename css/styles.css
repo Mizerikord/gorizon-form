@@ -88,31 +88,100 @@ body {
     height: 44px;
     border: none;
     border-radius: 22px;
-    background-color: #1ab9db;
+    background-color: #b59e89;
     color: #ffffff;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.filter-result-btn:hover{
+    transition-duration: 0.5s;
+    background-color: #94816f;
 }
 
 .input-default {
     width: 100%;
     height: 38px;
-    overflow: hidden;
     border: none;
     outline: 1px solid #666;
     grid-column-start: 1;
     grid-column-end: 5;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .search-input {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
+    width: calc(100% - 20px);
     height: 100%;
     border: none;
-    background: #fff url(https://gorizont-spb.com/local/templates/horizont/img/svg-icons/home/magnifying-glass.svg) no-repeat center right 10px;
+    background: #fff url(../media/search-svgrepo-com.svg) no-repeat center right 10px;
+    background-size: 26px 26px;
     padding: 0 10px;
-    box-sizing: border-box;
+    outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+    background-color: #FFFFFF !important;
+    color: #555 !important;
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: #555555 !important;
+}
+
+.inputs-results-list{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #fff;
+    gap: 3px;
+    list-style-type: none;
+    width: 100%;
+    border: 1px solid #666;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 39px;
+    left: -1px;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 99;
+}
+
+.input-result-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    color: #666;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2em;
+    padding-left: 10px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+.input-result-item:hover{
+    transition-duration: 0.1s;
+    background-color: #eaebed;
+}
+
+.input-result-item-name{
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 2em;
+    background-color: #b59e89;
+    color: #000000;
+    width: 100%;
+    padding-left: 10px;
 }
 
 .advanced-search-nav {
@@ -157,9 +226,9 @@ body {
     content: "+";
     width: 14px;
     height: 14px;
-    border: 1px solid #1ab9db;
+    border: 1px solid #b59e89;
     border-radius: 50%;
-    background-color: #1ab9db;
+    background-color: #b59e89;
     color: #ffffff;
     font-size: 14px;
     text-align: center;
@@ -201,7 +270,7 @@ body {
 }
 
 .description-hover:hover {
-    color: #1ab9db;
+    color: #b59e89;
     transition-duration: 0.5s;
 }
 
@@ -345,12 +414,6 @@ body {
     width: 100%;
 }
 
-.popup-select_price {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
-}
-
 .select-list {
     list-style-type: none;
     display: flex;
@@ -363,6 +426,7 @@ body {
     padding: 0;
     margin: 20px 0 0;
     overflow: auto;
+    padding-left: 0;
 }
 
 .select-item {
@@ -379,7 +443,7 @@ body {
 
 .select-item:hover {
     transition-duration: 0.5s;
-    color: #1ab9db;
+    color: #b59e89;
 }
 
 .price-select {
@@ -411,17 +475,17 @@ body {
 
 .location {
     border: none;
-    outline: 1px solid #1ab9db;
+    outline: 1px solid #b59e89;
     background-color: #fff;
     height: 34px;
     width: auto;
     padding: 0 15px;
     margin-bottom: 10px;
-    color: #1ab9db;
+    color: #b59e89;
 }
 
 .location_checked {
-    background-color: #1ab9db;
+    background-color: #b59e89;
     color: #ffffff;
 }
 
@@ -435,7 +499,7 @@ body {
 }
 
 .reset {
-    color: #1ab9db;
+    color: #b59e89;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -444,7 +508,7 @@ body {
     height: 22px;
     width: auto;
     color: #ffffff;
-    background-color: #1ab9db;
+    background-color: #b59e89;
     border: none;
     border-radius: 5px;
 }
@@ -455,13 +519,12 @@ body {
     width: 15px;
     height: 15px;
     color: #000000;
-    margin-right: 10px;
-    margin-bottom: 1px;
+    margin: 0 10px 1px 0 !important;
 }
 
 .select-price-radio::before {
     display: inline-block;
-    border: 1px solid #1ab9db;
+    border: 1px solid #b59e89;
     content: "";
     position: absolute;
     top: 0px;
@@ -503,7 +566,7 @@ body {
 
 .radio-text:hover {
     transition-duration: 0.5s;
-    color: #1ab9db;
+    color: #b59e89;
 }
 
 .radio-elem {
@@ -555,12 +618,12 @@ body {
 }
 
 .selected-item:hover{
-    background-color: #1ab9db;
+    background-color: #b59e89;
     transition-duration: 0.5s;
 }
 
 .selected-clear{
-    color: #1ab9db;
+    color: #b59e89;
     text-decoration: underline;
     cursor: pointer;
     margin-right: 10px;
@@ -568,6 +631,115 @@ body {
 
 .filter-result-slim{
     display: none;
+}
+
+.found-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #555;
+    box-sizing: border-box;
+}
+
+.found-container{
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-flow: row;
+    grid-gap: 20px;
+    justify-items: self-start;
+    padding: 10px;
+}
+
+.found-img-container{
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #b2b2b2;
+}
+
+.found-builder-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.found-build-info{
+    width: 100%;
+}
+
+.found-builder-info-header{
+    margin: 0;
+    font-family: 'Lato', 'Arial';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1em;
+    color: #666;
+}
+
+.found-builder-info-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.build-info-item, .found-price-item{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.found-price{
+    width: 100%;
+}
+
+.found-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.found-input{
+    height: 48px;
+    border: 2px solid #b59e89;
+    border-radius: 24px;
+    min-width: 250px;
+    text-align: center;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    font-family: 'Lato', 'Arial';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1em;
+    padding: 0 10px;
+}
+.found-input:hover{
+    transition-duration: 0.5s;
+    background-color: #b59e89;
+    color: #FFFFFF;
+}
+
+.found-to-map{
+    transition-duration: 0.5s;
+    cursor: pointer;
+    font-family: 'Lato', 'Arial';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1em;
+    color: #b59e89;
+}
+
+.found-to-map:hover{
+    opacity: 0.8;
+}
+
+.drop-btn__name_disabled{
+    outline: 2px solid red;
 }
 
 @media screen and (max-width: 767px) {
@@ -624,7 +796,7 @@ body {
         content: url(../media/chevron-left.svg);
         width: 10px;
         height: 15px;
-        color: #1ab9db;
+        color: #b59e89;
         margin-right: 5px;
     }
 
@@ -634,8 +806,8 @@ body {
         border: none;
         outline: none;
         cursor: pointer;
-        color: #1ab9db;
-        border-bottom: 1px solid #1ab9db;
+        color: #b59e89;
+        border-bottom: 1px solid #b59e89;
         font-family: 'Lato';
         font-weight: 400;
         font-size: 14px;

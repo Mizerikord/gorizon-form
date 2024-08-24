@@ -20,22 +20,24 @@
                 <div class="drop-filter-bar">
                     <div id="drop-close" class="drop-filter">
                         <div id="regions" class="drop-btn">
-                            <p class="drop-btn__name">Районы, локации</p>
+                            <p class="drop-btn__name drop-btn__name_disabled">Районы, локации</p>
                         </div>
                         <div id="building_deadlines" class="drop-btn">
-                            <p class="drop-btn__name">Срок сдачи</p>
+                            <p class="drop-btn__name drop-btn__name_disabled">Срок сдачи</p>
                         </div>
                         <div id="rooms" class="drop-btn">
-                            <p class="drop-btn__name">Тип квартиры</p>
+                            <p class="drop-btn__name drop-btn__name_disabled">Тип квартиры</p>
                         </div>
                         <div id="price" class="drop-btn">
-                            <p class="drop-btn__name">Цена, тыс. руб.</p>
+                            <p class="drop-btn__name drop-btn__name_disabled">Цена, тыс. руб.</p>
                         </div>
                         <input id="result-btn" type="button" class="filter-result-btn filter-result-wide"
                             value="Показать">
                         <label for="" class="input-default">
-                            <input type="text" name="search" id="search-area" class="search-input"
+                            <input type="text" name="search" id="search-area" class="search-input" value=""
                                 placeholder="Поиск по названию застройщика или ЖК">
+                            <ol class="inputs-results-list">
+                            </ol>
                         </label>
                         <div class="advanced-search-nav">
                             <div class="description-hover">
@@ -52,13 +54,13 @@
                 <div class="filter-bar-bottom">
                     <div id="drop-open" class="drop-filter">
                         <div id="pay" class="drop-btn">
-                            <p class="drop-btn__name">оплата</p>
+                            <p class="drop-btn__name drop-btn__name_disabled">Оплата</p>
                         </div>
                         <div id="decorate" class="drop-btn">
-                            <p class="drop-btn__name">Отделака</p>
+                            <p class="drop-btn__name drop-btn__name_disabled">Отделка</p>
                         </div>
                         <div id="city" class="drop-btn">
-                            <p class="drop-btn__name">Город и обл.</p>
+                            <p class="drop-btn__name drop-btn__name_disabled">Город и обл.</p>
                         </div>
                         <div class="drop-btn-hidden">
                         </div>
@@ -86,27 +88,28 @@
                     </div>
                 </div>
                 <div class="selected-points">
-                    <ul class="selected-list">
+                    <ol class="selected-list">
                         <p class="selected-clear">Сбросить</p>
-                    </ul>
+                    </ol>
                 </div>
                 <input id="result-btn-add" type="button" class="filter-result-btn filter-result-slim" value="Показать">
             </form>
+            
 
         </div>
 
         <template class="regions">
             <div class="popup">
                 <div class="locations">
-                    <input type="button" value="Районы" class="location location_checked">
-                    <input type="button" value="Метро" class="location">
-                    <input type="button" value="Локации" class="location">
+                    <input type="button" value="Районы" data-set="regions" class="location location_checked">
+                    <input type="button" value="Метро" data-set="subways" class="location">
+                    <input type="button" value="Локации" data-set="location" class="location">
                 </div>
                 <input type="text" name="select-location" id="select-location" class="search-location"
                     placeholder="Введите название">
                 <div class="popup-select">
-                    <ul class="select-list">
-                    </ul>
+                    <ol class="select-list">
+                    </ol>
                 </div>
                 <div class="popup-btn-container">
                     <p class="reset">Сбросить</p>
@@ -118,8 +121,8 @@
         <template class="building_deadlines rooms">
             <div class="popup">
                 <div class="popup-select">
-                    <ul class="select-list">
-                    </ul>
+                    <ol class="select-list">
+                    </ol>
                 </div>
                 <div class="popup-btn-container">
                     <p class="reset">Сбросить</p>
@@ -131,14 +134,8 @@
         <template class="price">
             <div class="popup">
                 <div class="price-select">
-                    <input type="text" class="price-enter-input" placeholder="От">
-                    <input type="text" class="price-enter-input" placeholder="До">
-                </div>
-                <div class="popup-select popup-select_price">
-                    <ul class="select-list select-list_start">
-                    </ul>
-                    <ul class="select-list select-list_stop">
-                    </ul>
+                    <input id="prices_min" type="text" class="price-enter-input" placeholder="От" value="">
+                    <input id="prices_max" type="text" class="price-enter-input" placeholder="До" value="">
                 </div>
                 <div class="popup-btn-container">
                     <p class="reset">Сбросить</p>
@@ -150,8 +147,8 @@
         <template class="pay decorate city">
             <div class="popup">
                 <div class="popup-select">
-                    <ul class="select-list">
-                    </ul>
+                    <ol class="select-list">
+                    </ol>
                 </div>
                 <div class="popup-btn-container">
                     <input type="button" class="confirm" value="Ok">
@@ -165,9 +162,47 @@
                 <label class="radio-text" for=""></label>
             </li>
         </template>
+        <template id="found">
+            <div class="found-result">
+                <div class="found-container">
+                    <div class="found-img-container">
+                        <img src="" alt="" class="found-img">
+                    </div>
+                    <div class="found-builder-info">
+                        <h2 class="found-builder-info-header">ЖК ххххх</h2>
+                        <p class="found-builder-info-addres">адрес</p>
+                        <ol class="found-builder-info-list">
+                            <li class="found-builder-info-item">
+                                <p class="found-subway">метро</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="found-build-info">
+                        <ol class="build-info-list">
+                            <li class="build-info-item">
+                                <p class="build-description">xxxx</p>
+                                <p class="build-info">xxxx</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="found-price">
+                        <ol class="found-price-list">
+                            <li class="found-price-item">
+                                <p class="found-price-description">xxxx</p>
+                                <p class="found-price-info">xxxx</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="found-btn-container">
+                    <input type="text" class="found-input" value="Перейти на страницу комплекса">
+                    <p class="found-to-map">Посмотреть на карте</p>
+                </div>
+            </div>
+        </template>
     </section>
 </body>
-<script type="module" src="./js/utils/data.js"></script>
-<script type="module" src="./js/scrypt.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="module" src="./js/form-scrypt.js"></script>
 
 </html>
