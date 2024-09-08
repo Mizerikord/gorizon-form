@@ -9,200 +9,431 @@
 </head>
 
 <body>
-    <div class="mobile-nav-filter">
-        <p class="filter-back">Назад</p>
-        <p type="button" value="Сбросить все" class="selected-clear">Сбросить все</p>
-    </div>
-    <div class="mobile-prev">&nbsp; Фильтр</div>
-    <section class="filter-wrapper">
-        <div class="filter-bar">
-            <form action="" class="smartfilter">
-                <div class="drop-filter-bar">
-                    <div id="drop-close" class="drop-filter">
-                        <div id="regions" class="drop-btn">
-                            <p class="drop-btn__name drop-btn__name_disabled">Районы, локации</p>
-                        </div>
-                        <div id="building_deadlines" class="drop-btn">
-                            <p class="drop-btn__name drop-btn__name_disabled">Срок сдачи</p>
-                        </div>
-                        <div id="rooms" class="drop-btn">
-                            <p class="drop-btn__name drop-btn__name_disabled">Тип квартиры</p>
-                        </div>
-                        <div id="price" class="drop-btn">
-                            <p class="drop-btn__name drop-btn__name_disabled">Цена, тыс. руб.</p>
-                        </div>
-                        <input id="result-btn" type="button" class="filter-result-btn filter-result-wide"
-                            value="Показать">
-                        <label for="" class="input-default">
-                            <input type="text" name="search" id="search-area" class="search-input" value=""
-                                placeholder="Поиск по названию застройщика или ЖК">
-                            <ol class="inputs-results-list">
-                            </ol>
-                        </label>
-                        <div class="advanced-search-nav">
-                            <div class="description-hover">
-                                <input type="checkbox" name="show-to-map" class="select-price-radio" id="show-to-map">
-                                <label class="search-checkbox-description" for="show-to-map">Показать объекты на
-                                    карте</label>
-                            </div>
-                            <div class="add-search-nav search-box" for="add-more">
-                                <p class="search-checkbox-description search-checkbox-add">Расширенный поиск</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="filter-bar-bottom">
-                    <div id="drop-open" class="drop-filter">
-                        <div id="pay" class="drop-btn">
-                            <p class="drop-btn__name drop-btn__name_disabled">Оплата</p>
-                        </div>
-                        <div id="decorate" class="drop-btn">
-                            <p class="drop-btn__name drop-btn__name_disabled">Отделка</p>
-                        </div>
-                        <div id="city" class="drop-btn">
-                            <p class="drop-btn__name drop-btn__name_disabled">Город и обл.</p>
-                        </div>
-                        <div class="drop-btn-hidden">
-                        </div>
-                        <div class="drop-btn-hidden">
-                        </div>
-                        <div class="drop-btn-counter">
-                            <div class="input-group">
-                                <h3 class="drop-header">S общая, кв.м</h3>
-                                <div class="input-container">
-                                    <input type="text" class="input-counter" placeholder="От">
-                                    <input type="text" class="input-counter" placeholder="До">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="drop-btn-counter">
-                            <div class="input-group">
-                                <h3 class="drop-header">S кухни, кв.м</h3>
-                                <div class="input-container">
-                                    <input type="text" class="input-counter" placeholder="От">
-                                    <input type="text" class="input-counter" placeholder="До">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="selected-points">
-                    <ol class="selected-list">
-                        <p class="selected-clear">Сбросить</p>
-                    </ol>
-                </div>
-                <input id="result-btn-add" type="button" class="filter-result-btn filter-result-slim" value="Показать">
-            </form>
-            
-
+    <div class="form-container">
+        <div class="mobile-nav-filter">
+            <p class="filter-back">Назад</p>
+            <p type="button" value="Сбросить все" class="selected-clear">Сбросить все</p>
         </div>
-
-        <template class="regions">
-            <div class="popup">
-                <div class="locations">
-                    <input type="button" value="Районы" data-set="regions" class="location location_checked">
-                    <input type="button" value="Метро" data-set="subways" class="location">
-                    <input type="button" value="Локации" data-set="location" class="location">
-                </div>
-                <input type="text" name="select-location" id="select-location" class="search-location"
-                    placeholder="Введите название">
-                <div class="popup-select">
-                    <ol class="select-list">
-                    </ol>
-                </div>
-                <div class="popup-btn-container">
-                    <p class="reset">Сбросить</p>
-                    <input type="button" class="confirm" value="Ok">
-                </div>
-            </div>
-        </template>
-
-        <template class="building_deadlines rooms">
-            <div class="popup">
-                <div class="popup-select">
-                    <ol class="select-list">
-                    </ol>
-                </div>
-                <div class="popup-btn-container">
-                    <p class="reset">Сбросить</p>
-                    <input type="button" class="confirm" value="Ok">
-                </div>
-            </div>
-        </template>
-
-        <template class="price">
-            <div class="popup">
-                <div class="price-select">
-                    <input id="prices_min" type="text" class="price-enter-input" placeholder="От" value="">
-                    <input id="prices_max" type="text" class="price-enter-input" placeholder="До" value="">
-                </div>
-                <div class="popup-btn-container">
-                    <p class="reset">Сбросить</p>
-                    <input type="button" class="confirm" value="Ok">
-                </div>
-            </div>
-        </template>
-
-        <template class="pay decorate city">
-            <div class="popup">
-                <div class="popup-select">
-                    <ol class="select-list">
-                    </ol>
-                </div>
-                <div class="popup-btn-container">
-                    <input type="button" class="confirm" value="Ok">
-                </div>
-            </div>
-        </template>
-
-        <template id="priceradio">
-            <li class="radio-elem">
-                <input type="radio" name="price" class="select-price-radio" id="">
-                <label class="radio-text" for=""></label>
-            </li>
-        </template>
-        <template id="found">
-            <div class="found-result">
-                <div class="found-container">
-                    <div class="found-img-container">
-                        <img src="" alt="" class="found-img">
+        <div class="mobile-prev">&nbsp; Фильтр</div>
+        <section class="filter-wrapper">
+            <div class="filter-bar">
+                <form action="" class="smartfilter">
+                    <div class="drop-filter-bar">
+                        <div id="drop-close" class="drop-filter">
+                            <div id="regions" class="drop-btn">
+                                <p class="drop-btn__name drop-btn__name_disabled">Районы, локации</p>
+                            </div>
+                            <div id="building_deadlines" class="drop-btn">
+                                <p class="drop-btn__name drop-btn__name_disabled">Срок сдачи</p>
+                            </div>
+                            <div id="rooms" class="drop-btn">
+                                <p class="drop-btn__name drop-btn__name_disabled">Тип квартиры</p>
+                            </div>
+                            <div id="price" class="drop-btn">
+                                <p class="drop-btn__name drop-btn__name_disabled">Цена, тыс. руб.</p>
+                            </div>
+                            <input id="result-btn" type="button" class="filter-result-btn filter-result-wide"
+                                value="Показать">
+                            <label for="result-btn" class="input-default">
+                                <input type="text" name="search" id="search-area" class="search-input" value=""
+                                    placeholder="Поиск по названию застройщика или ЖК">
+                                <ul class="inputs-results-list">
+                                </ul>
+                            </label>
+                            <div class="advanced-search-nav">
+                                <div class="description-hover">
+                                    <input type="checkbox" name="show-to-map" class="select-price-radio"
+                                        id="show-to-map">
+                                    <label class="search-checkbox-description" for="show-to-map">Показать объекты на
+                                        карте</label>
+                                </div>
+                                <div class="add-search-nav search-box">
+                                    <p class="search-checkbox-description search-checkbox-add">Расширенный поиск</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="found-builder-info">
-                        <h2 class="found-builder-info-header">ЖК ххххх</h2>
-                        <p class="found-builder-info-addres">адрес</p>
-                        <ol class="found-builder-info-list">
-                            <li class="found-builder-info-item">
-                                <p class="found-subway">метро</p>
+                    <div class="filter-bar-bottom">
+                        <div id="drop-open" class="drop-filter">
+                            <div id="pay" class="drop-btn">
+                                <p class="drop-btn__name drop-btn__name_disabled">Оплата</p>
+                            </div>
+                            <div id="decorate" class="drop-btn">
+                                <p class="drop-btn__name drop-btn__name_disabled">Отделка</p>
+                            </div>
+                            <div id="city" class="drop-btn">
+                                <p class="drop-btn__name drop-btn__name_disabled">Город и обл.</p>
+                            </div>
+                            <div class="drop-btn-hidden">
+                            </div>
+                            <div class="drop-btn-hidden">
+                            </div>
+                            <div class="drop-btn-counter">
+                                <div class="input-group">
+                                    <h3 class="drop-header">S общая, кв.м</h3>
+                                    <div class="input-container">
+                                        <input type="number" class="input-counter" id="area_total_from" placeholder="От"
+                                            value="">
+                                        <input type="number" id="area_total_to" class="input-counter" placeholder="До"
+                                            value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="drop-btn-counter">
+                                <div class="input-group">
+                                    <h3 class="drop-header">S кухни, кв.м</h3>
+                                    <div class="input-container">
+                                        <input type="number" id="area_kitchen_from" class="input-counter"
+                                            placeholder="От" value="">
+                                        <input type="number" id="area_kitchen_to" class="input-counter" placeholder="До"
+                                            value="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="selected-points">
+                        <ul class="selected-list">
+                            <p class="selected-clear">Сбросить</p>
+                        </ul>
+                    </div>
+                    <input id="result-btn-add" type="button" class="filter-result-btn filter-result-slim"
+                        value="Показать">
+                </form>
+                <div class="form-result-container">
+
+                </div>
+            </div>
+
+            <template class="regions">
+                <div class="popup">
+                    <div class="locations">
+                        <input type="button" value="Районы" data-set="regions" class="location location_checked">
+                        <input type="button" value="Метро" data-set="subways" class="location">
+                        <input type="button" value="Локации" data-set="location" class="location">
+                    </div>
+                    <input type="text" name="select-location" id="select-location" class="search-location"
+                        placeholder="Введите название">
+                    <div class="popup-select">
+                        <ul class="select-list">
+                        </ul>
+                    </div>
+                    <div class="popup-btn-container">
+                        <p class="reset">Сбросить</p>
+                        <input type="button" class="confirm" value="Ok">
+                    </div>
+                </div>
+            </template>
+
+            <template class="building_deadlines rooms">
+                <div class="popup">
+                    <div class="popup-select">
+                        <ul class="select-list">
+                        </ul>
+                    </div>
+                    <div class="popup-btn-container">
+                        <p class="reset">Сбросить</p>
+                        <input type="button" class="confirm" value="Ok">
+                    </div>
+                </div>
+            </template>
+
+            <template class="price">
+                <div class="popup">
+                    <div class="price-select">
+                        <input id="price_from" type="number" class="price-enter-input" placeholder="От" value="">
+                        <input id="price_to" type="number" class="price-enter-input" placeholder="До" value="">
+                    </div>
+                    <div class="popup-btn-container">
+                        <p class="reset">Сбросить</p>
+                        <input type="button" class="confirm" value="Ok">
+                    </div>
+                </div>
+            </template>
+
+            <template class="pay decorate city">
+                <div class="popup">
+                    <div class="popup-select">
+                        <ul class="select-list">
+                        </ul>
+                    </div>
+                    <div class="popup-btn-container">
+                        <input type="button" class="confirm" value="Ok">
+                    </div>
+                </div>
+            </template>
+
+            <template id="priceradio">
+                <li class="radio-elem">
+                    <input type="radio" name="price" class="select-price-radio" id="priceradio-input-elem">
+                    <label class="radio-text" for="priceradio-input-elem"></label>
+                </li>
+            </template>
+            <template id="found">
+                <div class="found-result">
+                    <div class="found-container">
+                        <div class="found-img-container">
+                            <img src="" alt="" class="found-img">
+                        </div>
+                        <div class="found-builder-info">
+                            <h2 class="found-builder-info-header"></h2>
+                            <p class="found-builder-info-addres"></p>
+                            <ul class="found-builder-info-list">
+                            </ul>
+                        </div>
+                        <div class="found-build-info">
+                            <ul class="build-info-list">
+                                <li class="build-info-item">
+                                    <p class="build-description">Сроки сдачи:</p>
+                                    <p class="build-info build-info-data"></p>
+                                </li>
+                                <li class="build-info-item">
+                                    <p class="build-description">Отделка:</p>
+                                    <p class="build-info build-info-finishing"></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="found-price">
+                            <ul class="found-price-list">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="found-btn-container">
+                        <input type="text" class="found-link" id="" value="Перейти на страницу комплекса">
+                        <p class="found-to-map">Посмотреть на карте</p>
+                    </div>
+                </div>
+            </template>
+            <template id="add-button">
+                <input type="button" value="Добавить" class="found-add-btn">
+            </template>
+        </section>
+    </div>
+    <template id="build-popup-template">
+        <div class="popup-build">
+            <div class="build-container">
+                <div class="build-header">
+                    <div class="build-header-container">
+                        <p class="build-subtitle">Информация</p>
+                        <h2 class="build-title"></h2>
+                        <div class="build-subways">
+                            <ul class="build-subways-list">
+                            </ul>
+                            <p class="build-street"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="build-promo">
+                    <div class="build-nav-line">
+                        <div class="build-nav-container">
+                            <ul class="build-nav-list">
+                                <li class="build-nav-item">
+                                    <a href="#build-promo" class="build-nav-link">ПЛАНИРОВКИ И ЦЕНЫ</a>
+                                </li>
+                                <li class="build-nav-item">
+                                    <a href="#build-money" class="build-nav-link">ПРЕИМУЩЕСТВА</a>
+                                </li>
+                                <li class="build-nav-item">
+                                    <a href="#description-about" class="build-nav-link">ОПИСАНИЕ</a>
+                                </li>
+                                <li class="build-nav-item">
+                                    <a href="#build-map" class="build-nav-link">КАРТА</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="build-promo-container">
+                            <div class="promo-container">
+                                <div class="promo-cap">
+                                    <h3 class="promo-title"></h3>
+                                    <p class="promo-rooms-count"></p>
+                                </div>
+                                <div class="promo-info">
+                                    <ul class="promo-info-list">
+                                        <li class="promo-info-item">
+                                            <p class="promo-info-elem">Сроки сдачи:</p>
+                                            <p class="promo-info-elem-data promo-info-elem-deadline"></p>
+                                        </li>
+                                        <li class="promo-info-item">
+                                            <p class="promo-info-elem">Этажность:</p>
+                                            <p class="promo-info-elem-data promo-info-elem-floor"></p>
+                                        </li>
+                                        <li class="promo-info-item">
+                                            <p class="promo-info-elem">Отделка:</p>
+                                            <p class="promo-info-elem-data promo-info-elem-finishung"></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="promo-slider">
+                                <div class="build-img-container">
+                                    <div class="build-img-item"></div>
+                                    <ul class="slider-checkbox-list">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="build-description-container" id="build-promo">
+                    <div class="build-description">
+                        <h3 class="description-title"></h3>
+                        <div class="description-form">
+                            <ul class="description-form-list">
+                            </ul>
+                        </div>
+                        <div class="description-form-container">
+                            <ul class="description-list">
+
+                            </ul>
+                        </div>
+                        <div class="description-about" id="description-about">
+                            <h3 class="description-about-title section-title">ОПИСАНИЕ ЖК</h3>
+                            <div class="description-about-text">
+                                <p class="description-about-paragraph"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="build-map" id="build-map">
+                        <h3 class="build-map-title section-title">НОВОСТРОЙКА НА КАРТЕ</h3>
+                        <div class="build-map-container">
+                            <script type="text/javascript" charset="utf-8" async
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A75310ecbca71b7bad042c054c0cd5e82724bccc1ebbf06a1971633e08bfc7ce7&amp;width=1170&amp;height=371&amp;lang=ru_RU&amp;scroll=true"></script>
+                        </div>
+                    </div>
+                    <div class="build-money">
+                        <div class="build-money-container" id="build-money">
+                            <h3 class="mortgage-title section-title">ИПОТЕКА</h3>
+                            <div class="mortgage-slider-container">
+                                <img src="" alt="" class="arrow-left">
+                                <div class="mortgage-slider"></div>
+                                <img src="" alt="" class="arrow-right">
+                            </div>
+                            <h4 class="mortgage-calc">МГНОВЕННЫЙ РАССЧЕТ ИПОТЕЧНОГО КРЕДИТА</h4>
+                            <div class="mortgage-calc-form">
+                                <h5 class="calc-header">Минимальная ставка банков на сегодняшний день <span
+                                        class="calc-percent">1%</span> </h5>
+                                <form action="" class="calc-form">
+                                    <div class="calc-user-area">
+                                        <ul class="calc-list">
+                                            <li class="calc-item">
+                                                <p class="calc-pos-data">Процентная ставка</p>
+                                                <input type="number" name="" id="calc-persent" class="calc-input">
+                                            </li>
+                                            <li class="calc-item">
+                                                <p class="calc-pos-data">Стоимость квартиры, руб</p>
+                                                <input type="number" name="" id="calc-price" class="calc-input">
+                                            </li>
+                                            <li class="calc-item">
+                                                <p class="calc-pos-data">Первый взнос, руб</p>
+                                                <input type="number" name="" id="calc-money" class="calc-input">
+                                            </li>
+                                            <li class="calc-item">
+                                                <p class="calc-pos-data">Срок ипотеки, лет</p>
+                                                <input type="number" name="" id="calc-period" class="calc-input">
+                                            </li>
+                                        </ul>
+                                        <div class="calc-result">
+                                            <p class="result-text">Ежемесячный платеж:</p>
+                                            <p class="result-price"></p>
+                                        </div>
+                                    </div>
+                                    <input type="button" value="Рассчитать" class="calc-button">
+                                    <div class="calc-callback-container">
+                                        <p class="calc-calback-text">Свяжитесь, чтобы уточнить условия ипотеки:</p>
+                                        <div class="callback-btn-link"><a href="#popup:myform"
+                                                class="callback-link">Заказать обратный звонок</a></div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="build-similar">
+                        <h3 class="similar-title">ПОХОЖИЕ ПРЕДЛОЖЕНИЯ</h3>
+                        <div class="similar-context">
+                            <input type="button" value="Рядом" class="similar-button"><input type="button" value="С похожей ценой" class="similar-button"><input type="button" value="Тот же застройщик" class="similar-button">
+                        </div>
+                        <div class="similar-slider-container">
+                            <input type="button" value="" class="similar-slider-left">
+                            <div class="similar-slider"></div>
+                            <input type="button" value="" class="similar-slider-right">
+                        </div>
+                    </div>
+                    <div class="build-callback">
+                        <img src="" alt="" class="build-callback-img">
+                        <div class="build-callback-container">
+                            <h4 class="build-callback-title">Свяжитесь, чтобы получить полную информацию о новостройках</h4>
+                            <input type="button" value="Связаться" class="build-callback-input">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="popup-disable"></div>
+        </div>
+    </template>
+    <template id="popup-scheme">
+        <div class="scheme-popup">
+            <div class="scheme-popup-container">
+                <div class="plan-disable"></div>
+                <h3 class="plan-title"></h3>
+                <ul class="plan-subways-list"></ul>
+                <div class="plan-scheme-container">
+                    <img src="" alt="" class="scheme-rooms">
+                    <div class="description-rooms">
+                        <div class="plan-description-header">
+                            <h4 class="plan-subtitle"></h4>
+                        </div>
+                        <ul class="plan-description-room-list">
+                            <li class="plan-description-room-item">
+                                <p class="plan-description-room-info">Срок сдачи:</p>
+                                <p class="plan-description-room-data plan-deadline"></p>
                             </li>
-                        </ol>
-                    </div>
-                    <div class="found-build-info">
-                        <ol class="build-info-list">
-                            <li class="build-info-item">
-                                <p class="build-description">xxxx</p>
-                                <p class="build-info">xxxx</p>
+                            <li class="plan-description-room-item">
+                                <p class="plan-description-room-info">Отделка:</p>
+                                <p class="plan-description-room-data plan-finishing"></p>
                             </li>
-                        </ol>
-                    </div>
-                    <div class="found-price">
-                        <ol class="found-price-list">
-                            <li class="found-price-item">
-                                <p class="found-price-description">xxxx</p>
-                                <p class="found-price-info">xxxx</p>
+                            <li class="plan-description-room-item">
+                                <p class="plan-description-room-info">Этаж:</p>
+                                <p class="plan-description-room-data plan-floor"></p>
                             </li>
-                        </ol>
+                            <li class="plan-description-room-item">
+                                <p class="plan-description-room-info">Оплата:</p>
+                                <p class="plan-description-room-data plan-pay"></p>
+                            </li>
+                            <li class="plan-description-room-item">
+                                <p class="plan-description-room-info">Высота потолка:</p>
+                                <p class="plan-description-room-data plan-height-roof"></p>
+                            </li>
+                            <li class="plan-description-room-item">
+                                <p class="plan-description-room-info">Кол-во комнат:</p>
+                                <p class="plan-description-room-data plan-room-numbers"></p>
+                            </li>
+                            <li class="plan-description-room-item">
+                                <p class="plan-description-room-info">Пл. общая</p>
+                                <p class="plan-description-room-data plan-area-total"></p>
+                            </li>
+                            <li class="plan-description-room-item">
+                                <p class="plan-description-room-info">Пл. кухни</p>
+                                <p class="plan-description-room-data plan-area-kitchen"></p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="found-btn-container">
-                    <input type="text" class="found-input" value="Перейти на страницу комплекса">
-                    <p class="found-to-map">Посмотреть на карте</p>
+                <div class="plan-callback-container">
+                    <p class="plan-info-text">Получите подробную информацию у специалиста: <span
+                            class="plan-phones"></span>
+                    </p>
+                    <div class="callback-btn-link"><a href="#popup:myform" class="callback-link">Заказать обратный
+                            звонок</a></div>
                 </div>
             </div>
-        </template>
-    </section>
+        </div>
+    </template>
+    <div class="preloader-container preloader-container_disale">
+        <div class="preloader-5"></div>
+    </div>
 </body>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script type="module" src="./js/form-scrypt.js"></script>
 
 </html>

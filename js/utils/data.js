@@ -1,5 +1,4 @@
 const data = {
-    "locations": [],
     "regions": [
         "Кронштадтский р-н",
         "Гатчинский р-н",
@@ -2495,7 +2494,7 @@ const data = {
 
 }
 
-const backData = [{
+const backData_ = [{
     "block.block_id": "65ccb9342443e98579d1ff5d",
     "block.name": "Коттеджный поселок «Экофорест»",
     "block.address": [
@@ -2544,6 +2543,9 @@ const backData = [{
     "building_voen_mortgage": false,
     "building_mortgage": true
 },
+
+
+
 {
     "blockblock_id": "609bdeba84d8532da79cd6cd",
     "block.name": "Морская миля",
@@ -2595,7 +2597,7 @@ const backData = [{
         "ЛСР. Северо-Запад"
     ],
     "finishing": [
-        "Чистовая"
+        "Чистовая", "Подчистовая"
     ],
     "rooms": [
         {
@@ -2722,4 +2724,2672 @@ const backData = [{
 }
 ]
 
-export default data;
+
+
+
+
+
+
+
+
+
+
+
+let backData =
+{
+    "block.block_id": "6401c5e8539def0eed397f67",
+    "block.name": "Лайнеръ",
+    "description": "<p dir=\"ltr\">Жилой комплекс спроектирован бюро FUTURA ARCHITECTS. Архитектурно-художественное решение комплекса, выполненного в духе минимализма, за счет наклонных стен, а также выступающих из плоскости фасадов элементов лоджий, позволяет простыми средствами обогатить его пластику. В архитектуре здания явно прослеживается образ корабля. В оформлении стен здания используется фасадная тонкослойная штукатурка белого, серо-голубого, серо-коричневого и красно-коричневого цветов и металлические декоративные элементы темно серого цвета. Вход в парадную осуществляется с уровня земли без ступеней и пандусов. В вестибюле предусмотрена зона ожидания и выполнена улучшенная отделка МОП. В комплексе есть электрический подогрев крылец, внутрипольное отопление в тамбурах и зонах при выходе. Так же спроектированы колясочные в каждом подъезде и короб для хранения уличных игрушек.</p>\n<p dir=\"ltr\">В проекте предусмотрены квартиры разных метражей &mdash; от студий до трехкомнатных, в том числе европланировки с просторной кухней-гостиной. Есть студии с двумя окнами, варианты с террасами, окном в ванной комнате. Лоты на верхних этажах имеют увеличенную высоту потолка &mdash; 3,11 метров. Из окон многих квартир открываются потрясающие виды на Неву и окрестности. Предлагаются квартиры с чистовой, подчистовой отделкой и без отделки.&nbsp;</p>\n<p dir=\"ltr\">Двор жилого комплекса закрыт для въезда машин, кроме специального транспорта. За пределами благоустроенного двора, размещенного на стилобате, предусмотрены специально отведенные открытые наземные парковочные места. Въезд на территорию ЖК ограничен шлагбаумом. Закрытый воротами и калитками двор находится на стилобате.</p>\n<p dir=\"ltr\">Жилой комплекс находится в Невском районе. В пешей доступности есть магазины, поликлиника, школы, детские сады и Октябрьская набережная. До метро &laquo;Обухово&raquo;, &laquo;Дунайская&raquo; и &laquo;Улица Дыбенко&raquo; можно добраться за 10 минут транспортом.</p>",
+    "block.address": [
+        "Октябрьская наб"
+    ],
+    "block.renderer": [
+        "https://cdn-dataout.trendagent.ru/images/tu/bg/218f63beb5faa1ce877e3db1b3a005b3.jpg",
+        "https://cdn-dataout.trendagent.ru/images/k0/6f/a5c90debe19c5152bd123ead0d290819.jpg",
+        "https://cdn-dataout.trendagent.ru/images/lh/kp/2d75b033139d61469a3f4fc1b43c5eb8.jpg",
+        "https://cdn-dataout.trendagent.ru/images/rw/4o/70bd04db9af0c8b3abf153d7f9dde07c.jpg",
+        "https://cdn-dataout.trendagent.ru/images/yb/ve/cfcfcad1b2fe1fdcd4dd1eddbbc3da0f.jpg",
+        "https://cdn-dataout.trendagent.ru/images/u1/ni/b68750be500a774b72f0c7a932f5b894.jpg",
+        "https://cdn-dataout.trendagent.ru/images/am/u1/144cc284b02e7e64c56510cbf82e292d.jpg"
+    ],
+    "block.geometry": {
+        "coordinates": [
+            30.49675057280941,
+            59.8618580337364
+        ],
+        "type": "Point"
+    },
+    "block.subway": [
+        {
+            "distance_time": 10,
+            "distance_type": 2,
+            "subway_name": "Обухово"
+        },
+        {
+            "distance_time": 10,
+            "distance_type": 2,
+            "subway_name": "Дунайская"
+        },
+        {
+            "distance_time": 15,
+            "distance_type": 2,
+            "subway_name": "Купчино"
+        },
+        {
+            "distance_time": 10,
+            "distance_type": 2,
+            "subway_name": "Улица Дыбенко"
+        }
+    ],
+    "finishing": [
+        "Чистовая",
+        "Без отделки",
+        "Подчистовая"
+    ],
+    "building_subsidy": false,
+    "building_voen_mortgage": true,
+    "building_mortgage": true,
+    "rooms": {
+        "III квартал 2025, корпус: 1": {
+            "2-к.кв": {
+                "640740a5d9101c073b1ffcb3": {
+                    "room_name": "2-к.кв",
+                    "price": 15041229.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 5.9,
+                    "area_given": 62.41,
+                    "area_kitchen": 14.91,
+                    "area_rooms": "17.17+13.38",
+                    "area_rooms_total": 30.550000000000004,
+                    "area_total": 59.46,
+                    "floor": 2,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "3",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/x/6/lwd3nx12e0e9inec38l1xk8c.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "640758d2e1a4c0d28266c5ce": {
+                    "room_name": "2-к.кв",
+                    "price": 16438526.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 5.9,
+                    "area_given": 62.05,
+                    "area_kitchen": 14.91,
+                    "area_rooms": "17.17+13.38",
+                    "area_rooms_total": 30.550000000000004,
+                    "area_total": 59.1,
+                    "floor": 3,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "14",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/p/3/p3zh5ilztin13d1gmsl4svwm.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "64098acee1a4c0a73c66c826": {
+                    "room_name": "2-к.кв",
+                    "price": 16438526.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 5.9,
+                    "area_given": 62.05,
+                    "area_kitchen": 14.91,
+                    "area_rooms": "17.17+13.38",
+                    "area_rooms_total": 30.550000000000004,
+                    "area_total": 59.1,
+                    "floor": 4,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "25",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/i/v/ha5padkoaw0dn6mezzsalzfw.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "64099e13d9101cdf74200ae2": {
+                    "room_name": "2-к.кв",
+                    "price": 16670174.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.0,
+                    "area_given": 62.1,
+                    "area_kitchen": 14.91,
+                    "area_rooms": "17.17+13.38",
+                    "area_rooms_total": 30.550000000000004,
+                    "area_total": 59.1,
+                    "floor": 5,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "36",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/3/n/n09rrq3a2ifxoky9a53pb8vv.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "6409a875e1a4c0441466d22d": {
+                    "room_name": "2-к.кв",
+                    "price": 16670174.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.0,
+                    "area_given": 62.1,
+                    "area_kitchen": 14.91,
+                    "area_rooms": "17.17+13.38",
+                    "area_rooms_total": 30.550000000000004,
+                    "area_total": 59.1,
+                    "floor": 6,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "47",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/s/9/e1133ugwi4km8piz4bmacud5.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "6409a942e1a4c051d266d2c0": {
+                    "room_name": "2-к.кв",
+                    "price": 13068649.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.9,
+                    "area_given": 59.69,
+                    "area_kitchen": 15.29,
+                    "area_rooms": "11.5+18.05",
+                    "area_rooms_total": 29.55,
+                    "area_total": 57.74,
+                    "floor": 2,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "149",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/b/g/y54lcw9kwxivn4c0cod30z76.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409afe7d9101c802e201111": {
+                    "room_name": "2-к.кв",
+                    "price": 17030852.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.0,
+                    "area_given": 62.09,
+                    "area_kitchen": 14.9,
+                    "area_rooms": "17.17+13.38",
+                    "area_rooms_total": 30.550000000000004,
+                    "area_total": 59.09,
+                    "floor": 7,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "58",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/1/t/g6112nbr9sq22ualm8cscov5.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "6409b4c3e1a4c0840566d6e2": {
+                    "room_name": "2-к.кв",
+                    "price": 12802647.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.77,
+                    "area_given": 58.95,
+                    "area_kitchen": 16.04,
+                    "area_rooms": "16.39+12.53",
+                    "area_rooms_total": 28.92,
+                    "area_total": 57.56,
+                    "floor": 3,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "159",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/1/t/tkmm4wx9z32wbas3knlwxqkx.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409b4f6d9101c08822012a0": {
+                    "room_name": "2-к.кв",
+                    "price": 14524604.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.86,
+                    "area_given": 59.14,
+                    "area_kitchen": 14.97,
+                    "area_rooms": "11.5+18.05",
+                    "area_rooms_total": 29.55,
+                    "area_total": 57.21,
+                    "floor": 3,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "160",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/s/q/yd3bqr0o0i86igb52eel66kr.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409b7add9101c9559201401": {
+                    "room_name": "2-к.кв",
+                    "price": 15190266.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.68,
+                    "area_given": 56.51,
+                    "area_kitchen": 11.72,
+                    "area_rooms": "12.4+16.81",
+                    "area_rooms_total": 29.21,
+                    "area_total": 54.67,
+                    "floor": 7,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "64",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/5/1/mkdnx1yh9b4i9xzntfkyzsvc.png"
+                    ],
+                    "wc_count": 2,
+                    "finishing_name": "Чистовая"
+                },
+                "6409bafae1a4c0c84866d98c": {
+                    "room_name": "2-к.кв",
+                    "price": 14524604.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.85,
+                    "area_given": 59.14,
+                    "area_kitchen": 14.97,
+                    "area_rooms": "11.5+18.05",
+                    "area_rooms_total": 29.55,
+                    "area_total": 57.21,
+                    "floor": 4,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "171",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/h/o/cgr4ucfhlhywtsd7tr13sb1g.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409be69e1a4c09a8f66db03": {
+                    "room_name": "2-к.кв",
+                    "price": 16111719.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.88,
+                    "area_given": 59.85,
+                    "area_kitchen": 12.01,
+                    "area_rooms": "13.65+16.81",
+                    "area_rooms_total": 30.46,
+                    "area_total": 57.41,
+                    "floor": 8,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "74",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/a/h/f11c1puh3w22n87qq1ko7fne.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Чистовая"
+                },
+                "6409c31b9ee8f7f6466fadde": {
+                    "room_name": "2-к.кв",
+                    "price": 17033657.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.0,
+                    "area_given": 62.1,
+                    "area_kitchen": 14.91,
+                    "area_rooms": "17.17+13.38",
+                    "area_rooms_total": 30.550000000000004,
+                    "area_total": 59.1,
+                    "floor": 9,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "78",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/9/2/l17zfak7m0o55pl9ry6907gn.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "6409c38b9ee8f723ab6fadf4": {
+                    "room_name": "2-к.кв",
+                    "price": 12939995.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.77,
+                    "area_given": 58.95,
+                    "area_kitchen": 16.04,
+                    "area_rooms": "16.39+12.53",
+                    "area_rooms_total": 28.92,
+                    "area_total": 57.56,
+                    "floor": 5,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "181",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/v/o/22wlg1b6t6s7sabdmeeb0xv4.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409c3a76489e13c65400449": {
+                    "room_name": "2-к.кв",
+                    "price": 14734364.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.86,
+                    "area_given": 59.14,
+                    "area_kitchen": 14.97,
+                    "area_rooms": "11.5+18.05",
+                    "area_rooms_total": 29.55,
+                    "area_total": 57.21,
+                    "floor": 5,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "182",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/y/x/v0ehzebzrdug7zs9nqg3amwu.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409eafa6489e1bee5400ea9": {
+                    "room_name": "2-к.кв",
+                    "price": 14734364.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.86,
+                    "area_given": 59.14,
+                    "area_kitchen": 14.97,
+                    "area_rooms": "11.5+18.05",
+                    "area_rooms_total": 29.55,
+                    "area_total": 57.21,
+                    "floor": 6,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "193",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/f/z/ryy51ixbp3g780xl9h64unw2.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409ef299ee8f754296fb920": {
+                    "room_name": "2-к.кв",
+                    "price": 13079500.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.77,
+                    "area_given": 58.96,
+                    "area_kitchen": 16.04,
+                    "area_rooms": "16.39+12.53",
+                    "area_rooms_total": 28.92,
+                    "area_total": 57.57,
+                    "floor": 7,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "203",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/0/9/er4xmckwnb9bi28fud1wye49.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409f5239ee8f796876fbb48": {
+                    "room_name": "2-к.кв",
+                    "price": 13081718.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.77,
+                    "area_given": 58.97,
+                    "area_kitchen": 16.04,
+                    "area_rooms": "16.4+12.53",
+                    "area_rooms_total": 28.93,
+                    "area_total": 57.58,
+                    "floor": 8,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "214",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/k/0/4n7dw88noi08c2bskbl6o9nx.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409f5346489e134da40110e": {
+                    "room_name": "2-к.кв",
+                    "price": 15083924.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.86,
+                    "area_given": 59.14,
+                    "area_kitchen": 14.97,
+                    "area_rooms": "11.5+18.05",
+                    "area_rooms_total": 29.55,
+                    "area_total": 57.21,
+                    "floor": 8,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "215",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/v/m/10tw3buf2qstse1crkvpkf23.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409fac06489e166af401449": {
+                    "room_name": "2-к.кв",
+                    "price": 15083924.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.86,
+                    "area_given": 59.14,
+                    "area_kitchen": 14.97,
+                    "area_rooms": "11.5+18.05",
+                    "area_rooms_total": 29.55,
+                    "area_total": 57.21,
+                    "floor": 9,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "225",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/t/8/34t9zqov9hdpnsqolrez9xs4.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409fe729ee8f7d85c6fbf91": {
+                    "room_name": "2-к.кв",
+                    "price": 13214631.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.77,
+                    "area_given": 58.95,
+                    "area_kitchen": 16.04,
+                    "area_rooms": "16.39+12.53",
+                    "area_rooms_total": 28.92,
+                    "area_total": 57.56,
+                    "floor": 10,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "234",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/h/8/35sk3i06ratly1rcd75pd83f.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409fe826489e142d8401581": {
+                    "room_name": "2-к.кв",
+                    "price": 15433547.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.86,
+                    "area_given": 59.14,
+                    "area_kitchen": 14.97,
+                    "area_rooms": "11.5+18.05",
+                    "area_rooms_total": 29.55,
+                    "area_total": 57.21,
+                    "floor": 10,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "235",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/w/n/ou5fu9ei5itr98qn0mn2womk.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "640a027c6489e1a7954015f1": {
+                    "room_name": "2-к.кв",
+                    "price": 13219113.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.77,
+                    "area_given": 58.97,
+                    "area_kitchen": 16.04,
+                    "area_rooms": "16.82+12.12",
+                    "area_rooms_total": 28.939999999999998,
+                    "area_total": 57.58,
+                    "floor": 11,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "244",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/w/h/pzktvq314pqn92et6pyqz3i6.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "640ae0b46489e1acae401d3e": {
+                    "room_name": "2-к.кв",
+                    "price": 14180889.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.54,
+                    "area_given": 54.5,
+                    "area_kitchen": 11.69,
+                    "area_rooms": "12.66+17.25",
+                    "area_rooms_total": 29.91,
+                    "area_total": 52.73,
+                    "floor": 13,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "115",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/c/2/flr9k8584ze16oxsrc2f0bnt.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae2fb9ee8f705f96fc913": {
+                    "room_name": "2-к.кв",
+                    "price": 13203423.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.67,
+                    "area_given": 58.9,
+                    "area_kitchen": 16.04,
+                    "area_rooms": "16.39+12.53",
+                    "area_rooms_total": 28.92,
+                    "area_total": 57.56,
+                    "floor": 12,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "253",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/k/3/rgon444xvn98y636axgcm2sd.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                }
+            },
+            "1-к.кв": {
+                "640754c5d9101cf694200134": {
+                    "room_name": "1-к.кв",
+                    "price": 9255797.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.26,
+                    "area_given": 38.97,
+                    "area_kitchen": 16.12,
+                    "area_rooms": "11.75",
+                    "area_rooms_total": 11.75,
+                    "area_total": 37.84,
+                    "floor": 2,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "9",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/r/x/4yc3b1yn12t8yxwl6bwv83m8.png"
+                    ],
+                    "wc_count": 2,
+                    "finishing_name": "Чистовая"
+                },
+                "64075a2fe1a4c0492b66c647": {
+                    "room_name": "1-к.кв",
+                    "price": 10766564.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.86,
+                    "area_given": 38.95,
+                    "area_kitchen": 13.25,
+                    "area_rooms": "14.28",
+                    "area_rooms_total": 14.28,
+                    "area_total": 37.52,
+                    "floor": 3,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "16",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/c/b/fud2tywznnz1q78to0x4p3ys.png"
+                    ],
+                    "wc_count": 2,
+                    "finishing_name": "Чистовая"
+                },
+                "64075cbad9101c1e49200345": {
+                    "room_name": "1-к.кв",
+                    "price": 9808147.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.0,
+                    "area_given": 33.57,
+                    "area_kitchen": 12.05,
+                    "area_rooms": "11.85",
+                    "area_rooms_total": 11.85,
+                    "area_total": 32.07,
+                    "floor": 3,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "18",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/6/w/twaxz7od25ogyqoey0leelay.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Чистовая"
+                },
+                "640986cde1a4c0cd9366c7b3": {
+                    "room_name": "1-к.кв",
+                    "price": 11140482.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.8,
+                    "area_given": 41.74,
+                    "area_kitchen": 18.4,
+                    "area_rooms": "11.75",
+                    "area_rooms_total": 11.75,
+                    "area_total": 39.84,
+                    "floor": 3,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "20",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/8/2/hq4pgvyv347qutfvwqnmq341.png"
+                    ],
+                    "wc_count": 2,
+                    "finishing_name": "Чистовая"
+                },
+                "6409aeace1a4c0d41866d522": {
+                    "room_name": "1-к.кв",
+                    "price": 9342230.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.96,
+                    "area_given": 35.53,
+                    "area_kitchen": 10.55,
+                    "area_rooms": "14.48",
+                    "area_rooms_total": 14.48,
+                    "area_total": 34.05,
+                    "floor": 6,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "55",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/9/k/2n3mp8i9uu6cl6kvna7gfcte.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Чистовая"
+                },
+                "6409b689e1a4c0dbcb66d802": {
+                    "room_name": "1-к.кв",
+                    "price": 10237838.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.0,
+                    "area_given": 33.57,
+                    "area_kitchen": 12.05,
+                    "area_rooms": "11.85",
+                    "area_rooms_total": 11.85,
+                    "area_total": 32.07,
+                    "floor": 7,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "62",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/m/h/punq890ddoef1n6kszlzgubs.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Чистовая"
+                },
+                "6409b83ce1a4c02ecd66d8af": {
+                    "room_name": "1-к.кв",
+                    "price": 9433155.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.96,
+                    "area_given": 35.53,
+                    "area_kitchen": 10.55,
+                    "area_rooms": "14.48",
+                    "area_rooms_total": 14.48,
+                    "area_total": 34.05,
+                    "floor": 7,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "66",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/k/t/z7utc3a4w0qwz5i4xbqgdnv4.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Чистовая"
+                },
+                "6409c12ce1a4c060ad66db93": {
+                    "room_name": "1-к.кв",
+                    "price": 8520012.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.79,
+                    "area_given": 37.66,
+                    "area_kitchen": 10.87,
+                    "area_rooms": "15.82",
+                    "area_rooms_total": 15.82,
+                    "area_total": 35.76,
+                    "floor": 5,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "180",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/i/2/d7ekw2spy4gf47x2wy0q2ez5.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409c4c39ee8f751f46fae5b": {
+                    "room_name": "1-к.кв",
+                    "price": 8260052.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.92,
+                    "area_given": 35.82,
+                    "area_kitchen": 11.1,
+                    "area_rooms": "15.71",
+                    "area_rooms_total": 15.71,
+                    "area_total": 34.36,
+                    "floor": 5,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "190",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/n/q/u4bz1y8gbqr2lzd2b6g5c6kw.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409ca2b9ee8f7a77e6faf6e": {
+                    "room_name": "1-к.кв",
+                    "price": 9433155.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.96,
+                    "area_given": 35.53,
+                    "area_kitchen": 10.55,
+                    "area_rooms": "14.48",
+                    "area_rooms_total": 14.48,
+                    "area_total": 34.05,
+                    "floor": 9,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "85",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/z/v/i7xg9to30z67t8zbh7bia8q5.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Чистовая"
+                },
+                "6409eacd9ee8f720006fb871": {
+                    "room_name": "1-к.кв",
+                    "price": 8520012.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.79,
+                    "area_given": 37.66,
+                    "area_kitchen": 10.76,
+                    "area_rooms": "15.82",
+                    "area_rooms_total": 15.82,
+                    "area_total": 35.76,
+                    "floor": 6,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "191",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/u/p/bc18sivp4qfcnpcaedkokiv9.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409ebb19ee8f77a786fb8a1": {
+                    "room_name": "1-к.кв",
+                    "price": 8260052.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.92,
+                    "area_given": 35.82,
+                    "area_kitchen": 11.1,
+                    "area_rooms": "15.71",
+                    "area_rooms_total": 15.71,
+                    "area_total": 34.36,
+                    "floor": 6,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "201",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/p/g/37009mcnfdec9ilo9ey3mo03.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409ef739ee8f7216c6fb93c": {
+                    "room_name": "1-к.кв",
+                    "price": 9552865.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.84,
+                    "area_given": 38.23,
+                    "area_kitchen": 11.85,
+                    "area_rooms": "16.12",
+                    "area_rooms_total": 16.12,
+                    "area_total": 36.81,
+                    "floor": 7,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "206",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/8/5/ooi7r0p0ma5iauqdb8vdtyi5.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409f0019ee8f76f116fb979": {
+                    "room_name": "1-к.кв",
+                    "price": 8350815.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.92,
+                    "area_given": 35.82,
+                    "area_kitchen": 11.1,
+                    "area_rooms": "15.71",
+                    "area_rooms_total": 15.71,
+                    "area_total": 34.36,
+                    "floor": 7,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "212",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/f/1/ibkactw170xoqmu4wbsfoal7.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409f6686489e13711401188": {
+                    "room_name": "1-к.кв",
+                    "price": 8350815.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.92,
+                    "area_given": 35.82,
+                    "area_kitchen": 11.1,
+                    "area_rooms": "15.71",
+                    "area_rooms_total": 15.71,
+                    "area_total": 34.36,
+                    "floor": 8,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "222",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/7/x/f5nvm7clruyqserzaf14ns9i.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409f93a9ee8f7d3006fbd69": {
+                    "room_name": "1-к.кв",
+                    "price": 9524040.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.96,
+                    "area_given": 35.53,
+                    "area_kitchen": 10.55,
+                    "area_rooms": "14.48",
+                    "area_rooms_total": 14.48,
+                    "area_total": 34.05,
+                    "floor": 10,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "94",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/3/5/6umsm9t7ci76w20l32yi7arb.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Чистовая"
+                },
+                "6409fe5c6489e17fb640157d": {
+                    "room_name": "1-к.кв",
+                    "price": 8707068.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.79,
+                    "area_given": 37.66,
+                    "area_kitchen": 10.76,
+                    "area_rooms": "15.82",
+                    "area_rooms_total": 15.82,
+                    "area_total": 35.76,
+                    "floor": 10,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "233",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/l/p/1dgzlsbf9dcas5db473nm9er.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409ffc89ee8f7f2976fbfce": {
+                    "room_name": "1-к.кв",
+                    "price": 8441532.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.92,
+                    "area_given": 35.82,
+                    "area_kitchen": 11.1,
+                    "area_rooms": "15.71",
+                    "area_rooms_total": 15.71,
+                    "area_total": 34.36,
+                    "floor": 10,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "242",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/t/t/ym6ybgukdkowi1lpn3n8i2er.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "640a026f9ee8f7a7136fc015": {
+                    "room_name": "1-к.кв",
+                    "price": 8707068.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.79,
+                    "area_given": 37.66,
+                    "area_kitchen": 10.87,
+                    "area_rooms": "15.82",
+                    "area_rooms_total": 15.82,
+                    "area_total": 35.76,
+                    "floor": 11,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "243",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/o/o/qc1381crzfemx7cfq00iuf2y.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "640ada5b9ee8f786b56fc59f": {
+                    "room_name": "1-к.кв",
+                    "price": 9524040.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.96,
+                    "area_given": 35.53,
+                    "area_kitchen": 10.55,
+                    "area_rooms": "14.48",
+                    "area_rooms_total": 14.48,
+                    "area_total": 34.05,
+                    "floor": 11,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "102",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/2/u/v63i99afrws6eavcgbfxpdxb.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Чистовая"
+                },
+                "640adbb59ee8f790976fc612": {
+                    "room_name": "1-к.кв",
+                    "price": 8441532.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.92,
+                    "area_given": 35.82,
+                    "area_kitchen": 11.1,
+                    "area_rooms": "15.71",
+                    "area_rooms_total": 15.71,
+                    "area_total": 34.36,
+                    "floor": 11,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "251",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/2/i/qiqte9kueaiqgotz31xwvl7b.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "640adf0f6489e124df401cc2": {
+                    "room_name": "1-к.кв",
+                    "price": 8591176.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.69,
+                    "area_given": 37.17,
+                    "area_kitchen": 10.86,
+                    "area_rooms": "15.82",
+                    "area_rooms_total": 15.82,
+                    "area_total": 35.32,
+                    "floor": 12,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "252",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/k/c/btarsnzukl2iosfb265ufn7h.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "640ae21e6489e17318401d9c": {
+                    "room_name": "1-к.кв",
+                    "price": 8821803.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.96,
+                    "area_given": 35.21,
+                    "area_kitchen": 10.55,
+                    "area_rooms": "14.48",
+                    "area_rooms_total": 14.48,
+                    "area_total": 33.73,
+                    "floor": 13,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "118",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/g/t/f6y6ri7qmgamp0xvu6n27vah.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae4626489e1b31c401e64": {
+                    "room_name": "1-к.кв",
+                    "price": 8352270.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.82,
+                    "area_given": 35.45,
+                    "area_kitchen": 11.1,
+                    "area_rooms": "15.71",
+                    "area_rooms_total": 15.71,
+                    "area_total": 34.04,
+                    "floor": 12,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "260",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/d/c/g8denp343yaxcbenleaeb0iy.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "640ae7b56489e121a3401f7e": {
+                    "room_name": "1-к.кв",
+                    "price": 8713126.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.91,
+                    "area_given": 35.12,
+                    "area_kitchen": 10.98,
+                    "area_rooms": "15.57",
+                    "area_rooms_total": 15.57,
+                    "area_total": 33.66,
+                    "floor": 13,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "265",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/8/a/c5grpy0mo8ftqymknhuihka1.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Подчистовая"
+                },
+                "640aea159ee8f7a8eb6fcb6c": {
+                    "room_name": "1-к.кв",
+                    "price": 8821803.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.96,
+                    "area_given": 35.21,
+                    "area_kitchen": 10.55,
+                    "area_rooms": "14.48",
+                    "area_rooms_total": 14.48,
+                    "area_total": 33.73,
+                    "floor": 15,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "134",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/e/s/tek4ugbra934xc78cmcrdbk5.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Подчистовая"
+                }
+            },
+            "Студии": {
+                "6409b5dce1a4c013eb66d7ae": {
+                    "room_name": "Студии",
+                    "price": 6742354.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.61,
+                    "area_given": 23.33,
+                    "area_kitchen": 0.0,
+                    "area_rooms": "14.51",
+                    "area_rooms_total": 14.51,
+                    "area_total": 21.52,
+                    "floor": 3,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "161",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/t/8/5kh0f926nq3cdkelg691z2p4.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409efe89ee8f7e2526fb965": {
+                    "room_name": "Студии",
+                    "price": 6689014.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.67,
+                    "area_given": 24.34,
+                    "area_kitchen": 0.0,
+                    "area_rooms": "15.76",
+                    "area_rooms_total": 15.76,
+                    "area_total": 23.0,
+                    "floor": 7,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "211",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/6/4/kui3ro56yz6ao3ywb50ltt2d.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409ffb19ee8f73d446fbfc7": {
+                    "room_name": "Студии",
+                    "price": 6976767.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.67,
+                    "area_given": 24.34,
+                    "area_kitchen": 0.0,
+                    "area_rooms": "15.76",
+                    "area_rooms_total": 15.76,
+                    "area_total": 23.0,
+                    "floor": 10,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "241",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/v/s/tatk8tz4s2avdef7vbhhv8x7.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "640adba59ee8f76d406fc60a": {
+                    "room_name": "Студии",
+                    "price": 6976767.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.67,
+                    "area_given": 24.34,
+                    "area_kitchen": 0.0,
+                    "area_rooms": "15.76",
+                    "area_rooms_total": 15.76,
+                    "area_total": 23.0,
+                    "floor": 11,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "250",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/w/v/eeeo17pe4k2qhcpa5btvz3f9.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "640ae43f6489e1cfb8401e55": {
+                    "room_name": "Студии",
+                    "price": 6907975.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.57,
+                    "area_given": 24.1,
+                    "area_kitchen": 0.0,
+                    "area_rooms": "15.8",
+                    "area_rooms_total": 15.8,
+                    "area_total": 22.81,
+                    "floor": 12,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "259",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/i/r/1i01l2lddgruuiaxzc2b7yzt.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "640ae7899ee8f7a13e6fca9c": {
+                    "room_name": "Студии",
+                    "price": 7363134.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.66,
+                    "area_given": 23.87,
+                    "area_kitchen": 0.0,
+                    "area_rooms": "15.65",
+                    "area_rooms_total": 15.65,
+                    "area_total": 22.54,
+                    "floor": 13,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "264",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/3/4/7s31896f7nekxxi1iw1aawdv.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Подчистовая"
+                }
+            },
+            "2Е-к.кв": {
+                "6409b637d9101cfe4b201366": {
+                    "room_name": "2Е-к.кв",
+                    "price": 9502653.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.88,
+                    "area_given": 39.94,
+                    "area_kitchen": 15.03,
+                    "area_rooms": "13.64",
+                    "area_rooms_total": 13.64,
+                    "area_total": 38.5,
+                    "floor": 3,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "163",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/l/m/38pi7amgf2a92f09emr2dmky.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409b66bd9101c60c8201381": {
+                    "room_name": "2Е-к.кв",
+                    "price": 9395479.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.67,
+                    "area_given": 38.34,
+                    "area_kitchen": 14.72,
+                    "area_rooms": "12.41",
+                    "area_rooms_total": 12.41,
+                    "area_total": 37.0,
+                    "floor": 3,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "164",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/n/h/5xioa5thskwvym976ycbq7gm.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409bb76d9101c74d0201585": {
+                    "room_name": "2Е-к.кв",
+                    "price": 9502653.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.88,
+                    "area_given": 39.94,
+                    "area_kitchen": 15.03,
+                    "area_rooms": "13.64",
+                    "area_rooms_total": 13.64,
+                    "area_total": 38.5,
+                    "floor": 4,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "174",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/0/1/qw1u00h1nscxwldnwitpc0vv.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409bbb2e1a4c0229d66da00": {
+                    "room_name": "2Е-к.кв",
+                    "price": 9395479.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.67,
+                    "area_given": 38.34,
+                    "area_kitchen": 14.72,
+                    "area_rooms": "12.41",
+                    "area_rooms_total": 12.41,
+                    "area_total": 37.0,
+                    "floor": 4,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "175",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/w/d/1dzcct0u0qz3c23lhw3bol45.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409bd11e1a4c07bc366da92": {
+                    "room_name": "2Е-к.кв",
+                    "price": 11540146.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.46,
+                    "area_given": 39.91,
+                    "area_kitchen": 15.86,
+                    "area_rooms": "13.69",
+                    "area_rooms_total": 13.69,
+                    "area_total": 38.18,
+                    "floor": 8,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "70",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/o/s/87yh4fl34ryix0pqyfecpsnk.png"
+                    ],
+                    "wc_count": 2,
+                    "finishing_name": "Чистовая"
+                },
+                "6409c44a6489e10d0b4004b8": {
+                    "room_name": "2Е-к.кв",
+                    "price": 9582838.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.69,
+                    "area_given": 38.32,
+                    "area_kitchen": 14.61,
+                    "area_rooms": "12.49",
+                    "area_rooms_total": 12.49,
+                    "area_total": 36.97,
+                    "floor": 5,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "186",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/c/p/4gtgdocvov7c18p27x21fncc.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409ca8b6489e1505940062e": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10798437.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.1,
+                    "area_given": 41.63,
+                    "area_kitchen": 14.28,
+                    "area_rooms": "13.08",
+                    "area_rooms_total": 13.08,
+                    "area_total": 39.58,
+                    "floor": 10,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "86",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/f/c/h5p6vybap376f6hru9y5d8l1.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "6409ef9a9ee8f7567c6fb94d": {
+                    "room_name": "2Е-к.кв",
+                    "price": 9871299.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.69,
+                    "area_given": 38.32,
+                    "area_kitchen": 14.6,
+                    "area_rooms": "12.5",
+                    "area_rooms_total": 12.5,
+                    "area_total": 36.97,
+                    "floor": 7,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "208",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/i/k/qi40rkm9r1ccbewarfxqt098.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409f5cf6489e145dc401147": {
+                    "room_name": "2Е-к.кв",
+                    "price": 9963592.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.78,
+                    "area_given": 39.84,
+                    "area_kitchen": 14.49,
+                    "area_rooms": "14.2",
+                    "area_rooms_total": 14.2,
+                    "area_total": 38.45,
+                    "floor": 8,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "217",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/c/3/zpw9ie0o08et63prd0ahx7ei.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409f5fc6489e156a6401175": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10329357.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.21,
+                    "area_given": 39.08,
+                    "area_kitchen": 15.5,
+                    "area_rooms": "13.27",
+                    "area_rooms_total": 13.27,
+                    "area_total": 36.97,
+                    "floor": 8,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "219",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/x/m/9h8ayimr9scuvluwznqu4gh4.png"
+                    ],
+                    "wc_count": 2,
+                    "finishing_name": "Без отделки"
+                },
+                "6409fa126489e13faf4013b6": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10801081.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.1,
+                    "area_given": 41.64,
+                    "area_kitchen": 14.28,
+                    "area_rooms": "13.09",
+                    "area_rooms_total": 13.09,
+                    "area_total": 39.59,
+                    "floor": 11,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "95",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/8/0/4sfgtsa521b3731vnxb0pt3w.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "6409fafc6489e18033401467": {
+                    "room_name": "2Е-к.кв",
+                    "price": 9873927.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.69,
+                    "area_given": 38.33,
+                    "area_kitchen": 14.61,
+                    "area_rooms": "12.5",
+                    "area_rooms_total": 12.5,
+                    "area_total": 36.98,
+                    "floor": 9,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "228",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/o/w/wfoxwv9uanhsee8hgs87uogx.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409fb179ee8f77a716fbe96": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10375164.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.56,
+                    "area_given": 39.25,
+                    "area_kitchen": 15.5,
+                    "area_rooms": "13.27",
+                    "area_rooms_total": 13.27,
+                    "area_total": 36.97,
+                    "floor": 9,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "229",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/l/x/7itrr81k9pztyulm5fi0s5hc.png"
+                    ],
+                    "wc_count": 2,
+                    "finishing_name": "Без отделки"
+                },
+                "6409ff429ee8f775726fbfb7": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10130064.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.69,
+                    "area_given": 38.21,
+                    "area_kitchen": 14.5,
+                    "area_rooms": "12.49",
+                    "area_rooms_total": 12.49,
+                    "area_total": 36.86,
+                    "floor": 10,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "238",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/c/3/9le7qw1623fm3ecf7ur9plkz.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "6409ff666489e1dc1240159b": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10611584.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.08,
+                    "area_given": 39.01,
+                    "area_kitchen": 15.52,
+                    "area_rooms": "13.27",
+                    "area_rooms_total": 13.27,
+                    "area_total": 36.97,
+                    "floor": 10,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "239",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/0/e/p1i6m2z2dgqxmzdr9m7602n2.png"
+                    ],
+                    "wc_count": 2,
+                    "finishing_name": "Без отделки"
+                },
+                "640adad06489e10195401b32": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10721820.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.1,
+                    "area_given": 41.34,
+                    "area_kitchen": 14.29,
+                    "area_rooms": "13.09",
+                    "area_rooms_total": 13.09,
+                    "area_total": 39.29,
+                    "floor": 12,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "103",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/m/t/t0r0ibfahw8h70ggpzoeibne.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "640adb146489e1c38d401b4a": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10130064.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.69,
+                    "area_given": 38.21,
+                    "area_kitchen": 14.5,
+                    "area_rooms": "12.49",
+                    "area_rooms_total": 12.49,
+                    "area_total": 36.86,
+                    "floor": 11,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "247",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/l/l/mo6r6w6u45ostd2t5g3cyns0.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "640adbe79ee8f76ddc6fc62f": {
+                    "room_name": "2Е-к.кв",
+                    "price": 11796872.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.3,
+                    "area_given": 39.76,
+                    "area_kitchen": 16.42,
+                    "area_rooms": "13.15",
+                    "area_rooms_total": 13.15,
+                    "area_total": 38.11,
+                    "floor": 12,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "105",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/u/c/3lwyslxuabdo1w6blsqniqah.png"
+                    ],
+                    "wc_count": 2,
+                    "finishing_name": "Чистовая"
+                },
+                "640adf289ee8f7735e6fc7a7": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10000968.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.1,
+                    "area_given": 41.36,
+                    "area_kitchen": 14.28,
+                    "area_rooms": "13.09",
+                    "area_rooms_total": 13.09,
+                    "area_total": 39.31,
+                    "floor": 13,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "111",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/8/z/tydm7q38xtx0s3k0upfht3cq.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae2846489e1ee87401db8": {
+                    "room_name": "2Е-к.кв",
+                    "price": 9993568.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.1,
+                    "area_given": 41.33,
+                    "area_kitchen": 14.28,
+                    "area_rooms": "13.09",
+                    "area_rooms_total": 13.09,
+                    "area_total": 39.28,
+                    "floor": 14,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "119",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/8/p/93y315hascfmk0syp7ydclnx.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae3af6489e10296401e1d": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10057070.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.59,
+                    "area_given": 37.94,
+                    "area_kitchen": 14.5,
+                    "area_rooms": "12.5",
+                    "area_rooms_total": 12.5,
+                    "area_total": 36.64,
+                    "floor": 12,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "256",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/h/1/wmx2y7ufzpq906fkegmnkftt.png"
+                    ],
+                    "wc_count": 1,
+                    "finishing_name": "Без отделки"
+                },
+                "640aea789ee8f71aae6fcbaf": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10095170.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.1,
+                    "area_given": 41.33,
+                    "area_kitchen": 14.28,
+                    "area_rooms": "13.09",
+                    "area_rooms_total": 13.09,
+                    "area_total": 39.28,
+                    "floor": 16,
+                    "floors": 17,
+                    "height": 3.11,
+                    "number": "135",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/d/n/u1z2vr2m1w62payuwzmxrux5.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640af67d9ee8f715236fd06a": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10698717.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.1,
+                    "area_given": 41.64,
+                    "area_kitchen": 14.28,
+                    "area_rooms": "13.09",
+                    "area_rooms_total": 13.09,
+                    "area_total": 39.59,
+                    "floor": 8,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "67",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/r/w/ripystweu28aqvsve9kq4vgv.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "640af6959ee8f73ce66fd073": {
+                    "room_name": "2Е-к.кв",
+                    "price": 10698717.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.1,
+                    "area_given": 41.64,
+                    "area_kitchen": 14.28,
+                    "area_rooms": "13.09",
+                    "area_rooms_total": 13.09,
+                    "area_total": 39.59,
+                    "floor": 9,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "77",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/3/i/88i5ovbr7g94zg4uioqn8vo0.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                }
+            },
+            "3Е-к.кв": {
+                "6409b73ce1a4c0ee1c66d830": {
+                    "room_name": "3Е-к.кв",
+                    "price": 14829795.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 5.9,
+                    "area_given": 63.64,
+                    "area_kitchen": 22.11,
+                    "area_rooms": "13+10.1",
+                    "area_rooms_total": 23.1,
+                    "area_total": 60.68,
+                    "floor": 3,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "166",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/f/u/kc5mos9092zxqab7iqgb3kwq.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409bc3bd9101c27b9201609": {
+                    "room_name": "3Е-к.кв",
+                    "price": 14822617.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 5.85,
+                    "area_given": 63.61,
+                    "area_kitchen": 22.12,
+                    "area_rooms": "13+10.1",
+                    "area_rooms_total": 23.1,
+                    "area_total": 60.68,
+                    "floor": 4,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "177",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/1/4/o6588k83i48tkozx6t0in7b0.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409c48c6489e1bb264004d6": {
+                    "room_name": "3Е-к.кв",
+                    "price": 15097867.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 5.85,
+                    "area_given": 63.85,
+                    "area_kitchen": 22.34,
+                    "area_rooms": "13+10.1",
+                    "area_rooms_total": 23.1,
+                    "area_total": 60.92,
+                    "floor": 5,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "188",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/e/n/cvflyaql2e5b5u7chu1n0m2u.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409c95a9ee8f71de46faf19": {
+                    "room_name": "3Е-к.кв",
+                    "price": 17973946.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.72,
+                    "area_given": 66.6,
+                    "area_kitchen": 15.74,
+                    "area_rooms": "16.4+18.52",
+                    "area_rooms_total": 34.92,
+                    "area_total": 64.24,
+                    "floor": 9,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "84",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/z/0/9tode3dd90up8irl898qiqkn.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "6409efd36489e14448400f9c": {
+                    "room_name": "3Е-к.кв",
+                    "price": 15403783.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 5.85,
+                    "area_given": 63.62,
+                    "area_kitchen": 22.11,
+                    "area_rooms": "13+10.1",
+                    "area_rooms_total": 23.1,
+                    "area_total": 60.69,
+                    "floor": 7,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "210",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/v/y/bc4a01574vl7xfi26embhooi.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409f5a16489e10eb5401132": {
+                    "room_name": "3Е-к.кв",
+                    "price": 15642390.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.61,
+                    "area_given": 63.87,
+                    "area_kitchen": 14.52,
+                    "area_rooms": "15.85+12.7",
+                    "area_rooms_total": 28.549999999999997,
+                    "area_total": 62.06,
+                    "floor": 8,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "216",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/g/2/fd3mdeg00hy9rymd3ize9rrp.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409f62c9ee8f7169c6fbb92": {
+                    "room_name": "3Е-к.кв",
+                    "price": 16623472.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 7.82,
+                    "area_given": 68.53,
+                    "area_kitchen": 22.54,
+                    "area_rooms": "13+12.21",
+                    "area_rooms_total": 25.21,
+                    "area_total": 64.61,
+                    "floor": 8,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "220",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/l/9/q24wqapl7s8007u5q7sgiaec.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409f8a76489e1cf34401258": {
+                    "room_name": "3Е-к.кв",
+                    "price": 19052772.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.96,
+                    "area_given": 69.06,
+                    "area_kitchen": 15.74,
+                    "area_rooms": "19.81+17.45",
+                    "area_rooms_total": 37.26,
+                    "area_total": 66.58,
+                    "floor": 10,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "93",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/l/1/oq4r7irrnpgqlci172aze2pc.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "6409fadb6489e117ad401461": {
+                    "room_name": "3Е-к.кв",
+                    "price": 15644900.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.61,
+                    "area_given": 63.88,
+                    "area_kitchen": 14.52,
+                    "area_rooms": "15.85+12.7",
+                    "area_rooms_total": 28.549999999999997,
+                    "area_total": 62.07,
+                    "floor": 9,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "226",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/d/9/b0y9cyv1qyaes0rs5bfghhch.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409fb4d9ee8f783186fbeb4": {
+                    "room_name": "3Е-к.кв",
+                    "price": 16693027.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 8.370000000000001,
+                    "area_given": 68.81,
+                    "area_kitchen": 22.54,
+                    "area_rooms": "13+12.21",
+                    "area_rooms_total": 25.21,
+                    "area_total": 64.62,
+                    "floor": 9,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "230",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/n/0/53drms2oigu4ch7ne2depsdc.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409fee36489e1b3b2401590": {
+                    "room_name": "3Е-к.кв",
+                    "price": 16019896.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 3.61,
+                    "area_given": 63.87,
+                    "area_kitchen": 14.62,
+                    "area_rooms": "15.85+12.99",
+                    "area_rooms_total": 28.84,
+                    "area_total": 62.06,
+                    "floor": 10,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "236",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/o/t/ka7itni5e0urhaymwcattv8o.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "6409ff9e9ee8f753416fbfc3": {
+                    "room_name": "3Е-к.кв",
+                    "price": 17284944.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 9.99,
+                    "area_given": 69.6,
+                    "area_kitchen": 22.52,
+                    "area_rooms": "13+12.21",
+                    "area_rooms_total": 25.21,
+                    "area_total": 64.6,
+                    "floor": 10,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "240",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/0/g/5mxmcfcgaxix41v5c4rmww4q.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "640ad9956489e1a563401a69": {
+                    "room_name": "3Е-к.кв",
+                    "price": 21044448.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 5.48,
+                    "area_given": 73.7,
+                    "area_kitchen": 17.2,
+                    "area_rooms": "20.35+14.37",
+                    "area_rooms_total": 34.72,
+                    "area_total": 70.96,
+                    "floor": 11,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "100",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/9/c/1w7og9opgpn36ct1upcohzci.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "640ada1b6489e13bca401ab2": {
+                    "room_name": "3Е-к.кв",
+                    "price": 19900626.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.14,
+                    "area_given": 72.07,
+                    "area_kitchen": 15.74,
+                    "area_rooms": "18.25+17.26",
+                    "area_rooms_total": 35.510000000000005,
+                    "area_total": 69.0,
+                    "floor": 11,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "101",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/8/h/cglp2vpcpqc8k0k26mi8ih7e.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "640adb8d9ee8f7c4656fc5ee": {
+                    "room_name": "3Е-к.кв",
+                    "price": 18956881.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.71,
+                    "area_given": 76.18,
+                    "area_kitchen": 27.69,
+                    "area_rooms": "13+12.33",
+                    "area_rooms_total": 25.33,
+                    "area_total": 72.82,
+                    "floor": 11,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "249",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/n/1/b2itp0es7rzye4d06k3a6zq4.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "640ae4199ee8f738fa6fc972": {
+                    "room_name": "3Е-к.кв",
+                    "price": 19025488.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 7.95,
+                    "area_given": 76.45,
+                    "area_kitchen": 27.33,
+                    "area_rooms": "13+12.33",
+                    "area_rooms_total": 25.33,
+                    "area_total": 72.47,
+                    "floor": 12,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "258",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/e/l/wffnn6wox6o993kqdskofqdt.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "640ae7686489e15d7b401f5b": {
+                    "room_name": "3Е-к.кв",
+                    "price": 20157769.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 8.89,
+                    "area_given": 76.2,
+                    "area_kitchen": 27.15,
+                    "area_rooms": "12.88+12.21",
+                    "area_rooms_total": 25.090000000000003,
+                    "area_total": 71.75,
+                    "floor": 13,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "263",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/i/0/mwkkfsqxn0mxxp67i5tc8itm.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640aec796489e112a440216b": {
+                    "room_name": "3Е-к.кв",
+                    "price": 18864486.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 19.2,
+                    "area_given": 69.1,
+                    "area_kitchen": 18.19,
+                    "area_rooms": "17.34+11.11",
+                    "area_rooms_total": 28.45,
+                    "area_total": 62.6,
+                    "floor": 14,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "266",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/t/5/o3kexzew3p4cn4f271qoq6d8.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640af0199ee8f7aff06fcd93": {
+                    "room_name": "3Е-к.кв",
+                    "price": 14122975.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 5.15,
+                    "area_given": 58.87,
+                    "area_kitchen": 15.79,
+                    "area_rooms": "12.66+12.3",
+                    "area_rooms_total": 24.96,
+                    "area_total": 56.29,
+                    "floor": 14,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "269",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/m/4/0u0n85vl0g79u07zlh87krk3.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640af23d6489e19b5040234c": {
+                    "room_name": "3Е-к.кв",
+                    "price": 13803906.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.57,
+                    "area_given": 57.54,
+                    "area_kitchen": 15.75,
+                    "area_rooms": "12.66+12.3",
+                    "area_rooms_total": 24.96,
+                    "area_total": 56.25,
+                    "floor": 15,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "271",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/x/0/ienb5bm8r297xyd0qnx62d4c.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                }
+            },
+            "3-к.кв": {
+                "6409c8176489e163794005a0": {
+                    "room_name": "3-к.кв",
+                    "price": 22849744.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.44,
+                    "area_given": 88.79,
+                    "area_kitchen": 19.22,
+                    "area_rooms": "12.25+16.96+15.82",
+                    "area_rooms_total": 45.03,
+                    "area_total": 85.57,
+                    "floor": 9,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "83",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/o/p/09sfg6rbvd3tpwn98omb9w5u.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "6409f8489ee8f780146fbc84": {
+                    "room_name": "3-к.кв",
+                    "price": 24101539.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.3,
+                    "area_given": 92.4,
+                    "area_kitchen": 20.73,
+                    "area_rooms": "12.25+17.22+13.72",
+                    "area_rooms_total": 43.19,
+                    "area_total": 89.25,
+                    "floor": 10,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "92",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/k/f/7hlg7gdcyxm5w2furegg0psp.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "6409fb0f9ee8f7e36b6fbe92": {
+                    "room_name": "3-к.кв",
+                    "price": 21674228.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.38,
+                    "area_given": 87.41,
+                    "area_kitchen": 15.39,
+                    "area_rooms": "13.92+17.29+13.77",
+                    "area_rooms_total": 44.980000000000004,
+                    "area_total": 84.22,
+                    "floor": 11,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "96",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/x/3/30snbb8wx9ismd84tw54vl20.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "640adb849ee8f782b36fc5ea": {
+                    "room_name": "3-к.кв",
+                    "price": 21594882.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.38,
+                    "area_given": 87.09,
+                    "area_kitchen": 15.39,
+                    "area_rooms": "13.92+17.29+13.77",
+                    "area_rooms_total": 44.980000000000004,
+                    "area_total": 83.9,
+                    "floor": 12,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "104",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/t/9/gpf53oenvtvyr4p61b8w0cty.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "640add529ee8f767126fc6dd": {
+                    "room_name": "3-к.кв",
+                    "price": 20692372.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 8.46,
+                    "area_given": 79.33,
+                    "area_kitchen": 14.48,
+                    "area_rooms": "15.01+10.23+15.57",
+                    "area_rooms_total": 40.81,
+                    "area_total": 75.1,
+                    "floor": 12,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "108",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/i/o/7nc446t2a059azoidnlrwuhe.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "640ade1e9ee8f75f7e6fc735": {
+                    "room_name": "3-к.кв",
+                    "price": 19172032.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.44,
+                    "area_given": 74.5,
+                    "area_kitchen": 15.95,
+                    "area_rooms": "11.76+12.11+15.61",
+                    "area_rooms_total": 39.48,
+                    "area_total": 72.28,
+                    "floor": 12,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "109",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/p/1/hh7q3gaz74z22diit795xn3m.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Чистовая"
+                },
+                "640adf8b9ee8f7bbae6fc7c3": {
+                    "room_name": "3-к.кв",
+                    "price": 20593324.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.38,
+                    "area_given": 87.09,
+                    "area_kitchen": 15.39,
+                    "area_rooms": "13.92+17.29+13.77",
+                    "area_rooms_total": 44.980000000000004,
+                    "area_total": 83.9,
+                    "floor": 13,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "112",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/k/d/ponpqdrui1o8k2u1rrzuq5u4.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae1559ee8f7a85f6fc870": {
+                    "room_name": "3-к.кв",
+                    "price": 20731494.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 8.08,
+                    "area_given": 83.14,
+                    "area_kitchen": 14.48,
+                    "area_rooms": "13.99+11.47+16.91",
+                    "area_rooms_total": 42.370000000000005,
+                    "area_total": 79.1,
+                    "floor": 13,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "116",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/t/k/01t7d70y16949crcy45ry6hp.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae1d66489e15850401d80": {
+                    "room_name": "3-к.кв",
+                    "price": 18968978.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.54,
+                    "area_given": 77.17,
+                    "area_kitchen": 15.95,
+                    "area_rooms": "11.8+13.33+16.97",
+                    "area_rooms_total": 42.1,
+                    "area_total": 74.9,
+                    "floor": 13,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "117",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/7/4/twdwc2yrd30smfhp1zawi7dh.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae2d56489e1ea01401de6": {
+                    "room_name": "3-к.кв",
+                    "price": 20593324.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.38,
+                    "area_given": 87.09,
+                    "area_kitchen": 15.39,
+                    "area_rooms": "13.92+17.29+13.77",
+                    "area_rooms_total": 44.980000000000004,
+                    "area_total": 83.9,
+                    "floor": 14,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "120",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/w/q/a0t18iziw8k2khb75acl3ymw.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae3929ee8f7b33a6fc93f": {
+                    "room_name": "3-к.кв",
+                    "price": 18541452.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.68,
+                    "area_given": 80.24,
+                    "area_kitchen": 14.25,
+                    "area_rooms": "13.74+14.16+14.07",
+                    "area_rooms_total": 41.97,
+                    "area_total": 78.9,
+                    "floor": 12,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "255",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/x/7/7fuyqoc1m6abz35l7bhi936n.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Без отделки"
+                },
+                "640ae53f6489e15c43401e99": {
+                    "room_name": "3-к.кв",
+                    "price": 21586785.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 8.22,
+                    "area_given": 86.57,
+                    "area_kitchen": 14.48,
+                    "area_rooms": "15.45+12.27+18.11",
+                    "area_rooms_total": 45.83,
+                    "area_total": 82.46,
+                    "floor": 14,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "124",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/2/a/yldt11p4706s34w6w1r1c3ru.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae6309ee8f7a6986fca17": {
+                    "room_name": "3-к.кв",
+                    "price": 19561374.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 4.34,
+                    "area_given": 79.58,
+                    "area_kitchen": 15.95,
+                    "area_rooms": "12.78+14.09+17.07",
+                    "area_rooms_total": 43.94,
+                    "area_total": 77.41,
+                    "floor": 14,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "125",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/s/m/k9w1kri85yp2rlzninvbekwp.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae6bf9ee8f721706fca2e": {
+                    "room_name": "3-к.кв",
+                    "price": 25632107.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 18.900000000000002,
+                    "area_given": 94.71,
+                    "area_kitchen": 14.94,
+                    "area_rooms": "17.34+16.82+16.67",
+                    "area_rooms_total": 50.83,
+                    "area_total": 88.3,
+                    "floor": 13,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "261",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/0/7/muom372zi3bl89quippwfo4z.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae7206489e11755401f28": {
+                    "room_name": "3-к.кв",
+                    "price": 19229544.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 2.91,
+                    "area_given": 77.86,
+                    "area_kitchen": 13.98,
+                    "area_rooms": "15.61+14.99+14.59",
+                    "area_rooms_total": 45.19,
+                    "area_total": 76.4,
+                    "floor": 13,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "262",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/e/i/mq9g62nmnp86p3prhv2zfav5.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae7246489e13379401f2c": {
+                    "room_name": "3-к.кв",
+                    "price": 20557854.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.38,
+                    "area_given": 86.94,
+                    "area_kitchen": 15.39,
+                    "area_rooms": "13.84+17.2+13.79",
+                    "area_rooms_total": 44.83,
+                    "area_total": 83.75,
+                    "floor": 15,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "128",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/l/s/wvi7s6y4q8ynre72m6d3c10m.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae8bc9ee8f7dc7a6fcaf8": {
+                    "room_name": "3-к.кв",
+                    "price": 22581720.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 8.44,
+                    "area_given": 90.56,
+                    "area_kitchen": 14.48,
+                    "area_rooms": "19.43+13.5+16.78",
+                    "area_rooms_total": 49.71,
+                    "area_total": 86.34,
+                    "floor": 15,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "132",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/k/o/oouu157n1vr2tcft95dwpvdi.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640ae95f6489e1710240203e": {
+                    "room_name": "3-к.кв",
+                    "price": 19799807.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.66,
+                    "area_given": 80.55,
+                    "area_kitchen": 15.95,
+                    "area_rooms": "12.78+14.13+16.85",
+                    "area_rooms_total": 43.760000000000005,
+                    "area_total": 77.22,
+                    "floor": 15,
+                    "floors": 17,
+                    "height": 2.8,
+                    "number": "133",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/k/e/shafxbglrzf9ka0t1vv0eetg.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640af27a6489e13c7b40235b": {
+                    "room_name": "3-к.кв",
+                    "price": 23836907.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 8.34,
+                    "area_given": 94.26,
+                    "area_kitchen": 14.95,
+                    "area_rooms": "17.23+18.67+14.07",
+                    "area_rooms_total": 49.970000000000006,
+                    "area_total": 90.09,
+                    "floor": 16,
+                    "floors": 17,
+                    "height": 3.11,
+                    "number": "139",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/k/4/7kcigqvaglxi40hs4nlncc7q.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640af3096489e1629e40237e": {
+                    "room_name": "3-к.кв",
+                    "price": 20770305.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 6.12,
+                    "area_given": 83.32,
+                    "area_kitchen": 15.95,
+                    "area_rooms": "13.62+16.84+16.04",
+                    "area_rooms_total": 46.5,
+                    "area_total": 80.26,
+                    "floor": 16,
+                    "floors": 17,
+                    "height": 3.11,
+                    "number": "140",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/q/h/mpu5r20um25luq75h4t55cxk.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                },
+                "640af5ff6489e16c9e40251b": {
+                    "room_name": "3-к.кв",
+                    "price": 21214030.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 8.06,
+                    "area_given": 85.1,
+                    "area_kitchen": 15.93,
+                    "area_rooms": "13.62+16.85+16.85",
+                    "area_rooms_total": 47.32,
+                    "area_total": 81.07,
+                    "floor": 17,
+                    "floors": 17,
+                    "height": 3.11,
+                    "number": "145",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/z/r/s0b5scbh22g9h7xnd3pmbigh.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                }
+            },
+            "4Е-к.кв": {
+                "640af1fe6489e1aadb40232f": {
+                    "room_name": "4Е-к.кв",
+                    "price": 25224425.0,
+                    "building_name": "1",
+                    "building_deadline": "III квартал 2025",
+                    "area_balconies_total": 15.86,
+                    "area_given": 96.76,
+                    "area_kitchen": 25.72,
+                    "area_rooms": "13.06+10.57+24.47",
+                    "area_rooms_total": 48.1,
+                    "area_total": 91.35,
+                    "floor": 15,
+                    "floors": 15,
+                    "height": 2.8,
+                    "number": "270",
+                    "plan": [
+                        "https://cdn-dataout.trendagent.ru/images/z/d/zsybu56zo2vc1v4lq6q0guie.png"
+                    ],
+                    "wc_count": 3,
+                    "finishing_name": "Подчистовая"
+                }
+            }
+        }
+    }
+}
+
+export default backData;
